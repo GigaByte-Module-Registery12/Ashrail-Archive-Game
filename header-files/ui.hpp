@@ -141,14 +141,70 @@ void startSceneAsciiFunction(){
 	
 	)";
 	
+	
 	cout<<startSceneTitleAscii<<endl;
 	
 } // startSceneAsciiFunction() function ends here.
 
 void playerStatsFunction(){
 	
+	cout<<"Player Health: "<<playerHealth;
+	spaceFunction(3);
+	cout<<"Player Morale: "<<playerMorale;
+	spaceFunction(3);
 	
 
 } // playerStatsFunction() function ends here
+
+
+void startSceneTitle(){
+
+clearConsoleFunction();
+string scene1 = R"(
+
+
+                                         / _\ ___ ___ _ __   ___  / |
+                                         \ \ / __/ _ \ '_ \ / _ \ | |
+                                         _\ \ (_|  __/ | | |  __/ | |
+                                         \__/\___\___|_| |_|\___| |_|
+
+
+)";
+
+cout<<scene1<<endl;
+
+endLineFunction(2);
+
+string ashrailValley = R"(
+
+                                     _               _ _  __      __   _ _            
+                           /\       | |             (_) | \ \    / /  | | |           
+                          /  \   ___| |__  _ __ __ _ _| |  \ \  / /_ _| | | ___ _   _ 
+                         / /\ \ / __| '_ \| '__/ _` | | |   \ \/ / _` | | |/ _ \ | | |
+                        / ____ \\__ \ | | | | | (_| | | |    \  / (_| | | |  __/ |_| |
+                       /_/    \_\___/_| |_|_|  \__,_|_|_|     \/ \__,_|_|_|\___|\__, |
+                                                                                 __/ |
+                                                                                |___/ 
+
+)";
+
+cout<<ashrailValley<<endl;
+
+endLineFunction(5);
+tabSpaceFunction(5);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+
+} // startSceneTitle() function ends here
+
+void scene2Title(){
+	
+	
+	
+	
+} // scene2Title() function ends here
+
 
 #endif // UI_HPP

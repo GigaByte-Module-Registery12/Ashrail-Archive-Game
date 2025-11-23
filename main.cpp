@@ -28,6 +28,7 @@ int main(){
 	// Game Title Ascii screen
 		gameTitleAsciiFunction();
 	
+	
 	// play or not
 	playOrNotInputFunction();
 	

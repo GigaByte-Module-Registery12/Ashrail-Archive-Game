@@ -16,21 +16,30 @@ the content would only be processed once, thus avoiding the redefinition error.
 using namespace std;
 // our header files:
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
-#include "ui.hpp" // contains ui related function for centering the text and clearing screen
+#include "ui.hpp" // contains ui related function and clearing screen
+#include "globalVars.hpp" // contains global variable
+
+// function declaration
+void startSceneTitle();
+
 
 // First Starting scenes
 int startScene(int sceneID) {
 	
+	startSceneTitle();
+	playerStatsFunction();
 	
-	cout<<" ";
 
 
 	sceneID = 1;
 	return sceneID;
-}
+} // startScene() functions ends here
+
+void allScenes(){
+
+startScene(1);
 
 
-
-
+} // allScenes() function ends here
 
 #endif // SCENES_HPP
