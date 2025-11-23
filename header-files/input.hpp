@@ -23,7 +23,7 @@ the #define directive.
 #include<cstdlib> // using for exit(); function
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
 #include "ui.hpp" // contains ui related function for centering the text and clearing screen
-#include "globalVar.hpp" // contains global variables
+#include "globalVars.hpp" // contains global variables
 using namespace std;
 
 /* 

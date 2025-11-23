@@ -9,12 +9,12 @@ using namespace std;
 
 // global variables
 // may use namespace for global variable(put it a side for now)
-int playerHealth = 100;
-int playerMorale = 50;
-int supplies = 3;
-string playerName = " ";
+// int playerHealth = 100;
+// int playerMorale = 50;
+// int supplies = 3;
+// string playerName = " ";
 // character encounter flag(not sure going to use or not)
-bool metSirComplier, metBangaliBaba, metSigmaSizzle100;
+// bool metSirComplier, metBangaliBaba, metSigmaSizzle100;
 
 int main(){
 
