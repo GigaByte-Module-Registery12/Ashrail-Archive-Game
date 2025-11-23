@@ -23,6 +23,7 @@ the #define directive.
 #include<cstdlib> // using for exit(); function
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
 #include "ui.hpp" // contains ui related function for centering the text and clearing screen
+#include "globalVar.hpp" // contains global variables
 using namespace std;
 
 /* 
@@ -53,11 +54,9 @@ void gamePlayingOrNotFunction(){
 		// calling playOrNot char type variable from playOrNotNamespace which is in input.hpp
 		
 		// *DEBUG CODE*
-		string playerName; // this should be a global variable(may be already declared in global)
+		
 		clearConsoleFunction();
-		cout<<"Please enter your character name: ";
-		// getline(cin, playerName); // don't know why not working
-		cin>>playerName;
+	startSceneAsciiFunction();
 		
 	} else if (playOrNotNamespace::playOrNot == 'n' || playOrNotNamespace::playOrNot == 'N'){
 		// player not want to play
@@ -70,13 +69,41 @@ void gamePlayingOrNotFunction(){
 		//	spaceFunction(7); 	// function foronly space  in utils.hpp
 		// Below text want to center it in console Terminal
 		cout<<"GO TO HELL AND CLOSE THIS PROGRAM"<<endl;
-		endLineFunction(4);		// function for breaking the lines in utils.hpp
+		endLineFunction(2);		// function for breaking the lines in utils.hpp
+		
+		string gunExit = R"(
+		
+		
+                                                      ^
+                                                     | |
+                                                   @#####@
+                                                 (###   ###)-.
+                                               .(###     ###) \
+                                              /  (###   ###)   )
+                                             (=-  .@#####@|_--"
+                                             /\    \_|l|_/ (\
+                                            (=-\     |l|    /
+                                             \  \.___|l|___/
+                                             /\      |_|   /
+                                            (=-\._________/\
+                                             \             /
+                                               \._________/
+                                                 #  ----  #
+                                                 #   __   #
+                                                 \########/
+
+		
+		
+		)";
+		cout<<gunExit<<endl;
+		endLineFunction(2);
 		tabSpaceFunction(5);	// function for space of tab in utils.hpp
 		// Below text want to center it in console Terminal
 		cout<<"Press enter to close the program"<<endl;
-		endLineFunction(5);
+		endLineFunction(2);
+		cin.ignore();
 		cin.get();
-	
+		clearConsoleFunction();
 		exit(0); // exit from the program, using this from cstdlib header file
 		
 	
