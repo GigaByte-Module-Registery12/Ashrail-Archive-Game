@@ -148,11 +148,15 @@ void startSceneAsciiFunction(){
 
 void playerStatsFunction(){
 	
+	endLineFunction(1);
+	tabSpaceFunction(1);
 	cout<<"Player Health: "<<playerHealth;
 	spaceFunction(3);
 	cout<<"Player Morale: "<<playerMorale;
 	spaceFunction(3);
-	
+	cout<<"Supplies: "<<supplies;
+
+	endLineFunction(4);
 
 } // playerStatsFunction() function ends here
 

@@ -21,7 +21,7 @@ using namespace std;
 
 // function declaration
 void startSceneTitle();
-
+void playerStatsFunction();
 
 // First Starting scenes
 int startScene(int sceneID) {
