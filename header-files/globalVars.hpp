@@ -24,7 +24,8 @@ using namespace std;
 int playerHealth = 100;
 int playerMorale = 50;
 int supplies = 3;
-string playerName = " ";
+int choice = 0;
+string playerName = "Arin";
 // character encounter flag(not sure going to use or not)
 bool metSirComplier, metBangaliBaba, metSigmaSizzle100;
 
