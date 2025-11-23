@@ -204,9 +204,29 @@ clearConsoleFunction();
 } // startSceneTitle() function ends here
 
 void scene2Title(){
+
+clearConsoleFunction();
+
+string scene2 = R"(
+
+
+
+
+)";
+
+cout<<scene2<<endl;	
+	
+endLineFunction(2);
+
+
 	
 	
-	
+endLineFunction(5);
+tabSpaceFunction(5);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
 	
 } // scene2Title() function ends here
 

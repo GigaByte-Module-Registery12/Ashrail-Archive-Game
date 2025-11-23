@@ -24,9 +24,12 @@ using namespace std;
 void startSceneTitle();
 void playerStatsFunction();
 void clearConsoleFunction();
+int scene2Function();
+int scene3Function();
+void scene2Title();
 
 // First Starting scenes
-int startScene(int sceneID) {
+int startScene() {
 	
 	startSceneTitle();
 	playerStatsFunction();
@@ -61,21 +64,31 @@ cin>>choice;
 	switch(choice){
 		case 1:
 			// call respective function of scene
-			
+			clearConsoleFunction();
+			supplies -= 1;
+			playerMorale += 2;
+			scene2Function();
 		break;
 	
 		case 2:
 			// call respective function of scene
-			
+			clearConsoleFunction();
+			playerHealth -= 5;
+			playerMorale -= 1;
+			scene3Function();
 		break;
 		
 		default:
 			endLineFunction(3);
 			tabSpaceFunction(5);
-			cout<<"You have to enter 1 or 2"<<endl;
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"Press enter to continue"<<endl;
+			cin.ignore();
 			cin.get();
 			clearConsoleFunction();
-			
 			
 			
 		break;
@@ -88,9 +101,31 @@ cin>>choice;
 	return sceneID;
 } // startScene() functions ends here
 
+
+int scene2Function(){
+	scene2Title();
+	
+	
+	playerStatsFunction();
+	cout<<"scene 2"<<endl;
+	sceneID = 2;
+	return sceneID;
+	
+} // scene2() function ends here
+
+int scene3Function(){
+	
+	
+	playerStatsFunction();
+	cout<<"scene 3"<<endl;
+	sceneID = 3;
+	return sceneID;
+	
+} // scene3()Function function ends here
+
 void allScenes(){
 
-startScene(1);
+startScene();
 
 
 } // allScenes() function ends here

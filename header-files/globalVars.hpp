@@ -25,6 +25,7 @@ int playerHealth = 100;
 int playerMorale = 50;
 int supplies = 3;
 int choice = 0;
+int sceneID = 0;
 string playerName = "Arin";
 // character encounter flag(not sure going to use or not)
 bool metSirComplier, metBangaliBaba, metSigmaSizzle100;
