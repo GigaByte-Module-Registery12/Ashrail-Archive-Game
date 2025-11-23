@@ -56,7 +56,12 @@ void gamePlayingOrNotFunction(){
 		// *DEBUG CODE*
 		
 		clearConsoleFunction();
-	startSceneAsciiFunction();
+		cout<<"Please enter your name: ";
+		getline(cin,playerName);
+		cin.get();
+		cin.ignore();
+		clearConsoleFunction();
+		startSceneAsciiFunction();
 		
 	} else if (playOrNotNamespace::playOrNot == 'n' || playOrNotNamespace::playOrNot == 'N'){
 		// player not want to play
