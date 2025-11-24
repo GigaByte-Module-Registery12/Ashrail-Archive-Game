@@ -17,7 +17,7 @@ int main(){
 	smallScrRecommendFunction();
 	
 	// Game Title Ascii screen
-		gameTitleAsciiFunction();
+	gameTitleAsciiFunction();
 	
 	
 	// play or not

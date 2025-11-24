@@ -29,6 +29,7 @@ int sceneID = 0;
 string playerName = "Arin";
 // character encounter flag(not sure going to use or not)
 bool metSirComplier, metBangaliBaba, metSigmaTemp100;
+bool gameRunning = true;
 
 
 
