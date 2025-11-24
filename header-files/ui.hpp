@@ -194,7 +194,7 @@ string ashrailValley = R"(
 
 cout<<ashrailValley<<endl;
 
-endLineFunction(5);
+endLineFunction(4);
 tabSpaceFunction(5);
 cout<<"Please press enter to continue.";
 cin.ignore();
@@ -207,8 +207,14 @@ void scene2Title(){
 
 clearConsoleFunction();
 
+// Ogre Ascii font style
 string scene2 = R"(
 
+                                              __                       ____
+                                             / _\ ___ ___ _ __   ___  |___ \
+                                             \ \ / __/ _ \ '_ \ / _ \   __) |
+                                             _\ \ (_|  __/ | | |  __/  / __/
+                                             \__/\___\___|_| |_|\___| |_____|
 
 
 
@@ -218,11 +224,24 @@ cout<<scene2<<endl;
 	
 endLineFunction(2);
 
+// Big Ascii font Style
+string riverBedShadows = R"(
+                   _____  _                _              _    _____ _               _                   
+                  |  __ \(_)              | |            | |  / ____| |             | |                  
+                  | |__) |___   _____ _ __| |__   ___  __| | | (___ | |__   __ _  __| | _____      _____ 
+                  |  _  /| \ \ / / _ \ '__| '_ \ / _ \/ _` |  \___ \| '_ \ / _` |/ _` |/ _ \ \ /\ / / __|
+                  | | \ \| |\ V /  __/ |  | |_) |  __/ (_| |  ____) | | | | (_| | (_| | (_) \ V  V /\__ \
+                  |_|  \_\_| \_/ \___|_|  |_.__/ \___|\__,_| |_____/|_| |_|\__,_|\__,_|\___/ \_/\_/ |___/
+                                                                                                         
+                                                                                                         
 
+)";
+
+cout<<riverBedShadows<<endl;	
 	
-	
-endLineFunction(5);
+endLineFunction(4);
 tabSpaceFunction(5);
+spaceFunction(4);
 cout<<"Please press enter to continue.";
 cin.ignore();
 cin.get();
