@@ -27,6 +27,9 @@ void clearConsoleFunction();
 int scene2Function();
 int scene3Function();
 void scene2Title();
+void scene3Title();
+// void scene4Title();
+int scene4Function();
 
 // First Starting scenes
 int startScene() {
@@ -73,8 +76,8 @@ cin>>choice;
 		case 2:
 			// call respective function of scene
 			clearConsoleFunction();
-			playerHealth -= 5;
-			playerMorale -= 1;
+			playerHealth -= 15;
+			playerMorale -= 10;
 			scene3Function();
 		break;
 		
@@ -105,9 +108,64 @@ cin>>choice;
 int scene2Function(){
 	scene2Title();
 	
-	
+	endLineFunction(1);
+	tabSpaceFunction(1);
+	cout<<"Effect: Mud slows you down "<<endl;
 	playerStatsFunction();
-	cout<<"scene 2"<<endl;
+	
+	tabSpaceFunction(5);
+	spaceFunction(4);
+	cout<<"Scene 2 - Riverbed Shadows";
+	endLineFunction(2);
+	
+// Implemeting scene 2 story
+cout << "\t You pick your way along the riverbed. "
+<< " Mist clings to low metal and the bones of houses.\n "
+<< " You pass a decayed playground where a swing moves once with the wind. "
+<< " Water here is tainted;\n  you ration what you have. "
+<< " Around a bend, a figure sits by a makeshift stove: "
+<< " a thin man in a\n  patched coat humming a slow tune. "
+<< " He lifts his head and smiles with tired teeth. \n"<<endl;
+
+
+cout<<"  Choices: "<<endl;
+cout<<"  1: Approch and speak to him."<<endl;
+cout<<"  2: Avoid him and move on; better not to chance trouble. \n"<<endl;
+cout<<"  Select your choice(1 or 2): ";
+cin>>choice;
+
+
+	switch(choice){
+		case 1:
+			// call respective function of scene
+			clearConsoleFunction();
+			playerMorale += 3;
+			scene4Function();
+		break;
+	
+		case 2:
+			// call respective function of scene
+			clearConsoleFunction();
+			
+		break;
+		
+		default:
+			endLineFunction(3);
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"Press enter to continue"<<endl;
+			cin.ignore();
+			cin.get();
+			clearConsoleFunction();
+			
+			
+		break;
+	}
+
+
 	sceneID = 2;
 	return sceneID;
 	
@@ -115,13 +173,27 @@ int scene2Function(){
 
 int scene3Function(){
 	
+	scene3Title();
 	
+	endLineFunction(1);
+	tabSpaceFunction(1);
+	cout<<"Effect: Fall risk - little bit damage on bones  "<<endl;
 	playerStatsFunction();
+	
+	
 	cout<<"scene 3"<<endl;
 	sceneID = 3;
 	return sceneID;
 	
 } // scene3()Function function ends here
+
+
+int scene4Function(){
+	
+	sceneID = 4;
+	return sceneID;
+} // scene4Function() ends here
+
 
 void allScenes(){
 
