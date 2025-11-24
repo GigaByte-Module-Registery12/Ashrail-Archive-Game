@@ -28,8 +28,9 @@ int scene2Function();
 int scene3Function();
 void scene2Title();
 void scene3Title();
-// void scene4Title();
+void scene4Title();
 int scene4Function();
+
 
 // First Starting scenes
 int startScene() {
@@ -212,7 +213,8 @@ cin>>choice;
 		case 2:
 			// call respective function of scene
 			clearConsoleFunction();
-			supplies += 2;
+			supplies += 1;
+			playerMorale -= 1;
 			scene4Function();
 		break;
 		
@@ -242,11 +244,9 @@ cin>>choice;
 
 int scene4Function(){
 	
-	// scene4Title();
+	 scene4Title();
 	
-	endLineFunction(1);
-	tabSpaceFunction(1);
-	cout<<"Effect: "<<endl;
+	endLineFunction(2);
 	playerStatsFunction();
 	
 	tabSpaceFunction(5);
@@ -256,11 +256,17 @@ int scene4Function(){
 	
 // Implemeting scene 4 story
 
-
+cout << "\t By midday you reach a crossroads of scorched billboards. "
+<< "A small camp of tarps and salvaged metal\n  stands by the road. "
+<< "Laughter — thin but genuine — drifts out. "
+<< "Among the campers are three notable figures\n  who chat and trade: a tall man "
+<< "with spectacles and an old laptop, a cheerful figure who offers tea, and\n  a man "
+<< "who talks loudly about his confidence while fussing with a scarf. "
+<< "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
 
 cout<<"  Choices: "<<endl;
-cout<<"  1: "<<endl;
-cout<<"  2:  \n"<<endl;
+cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
+cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
 cout<<"  Select your choice(1 or 2): ";
 cin>>choice;
 
@@ -269,14 +275,16 @@ cin>>choice;
 		case 1:
 			// call respective function of scene
 			clearConsoleFunction();
-		
+			// scene5Function();
 			
 		break;
 	
 		case 2:
 			// call respective function of scene
 			clearConsoleFunction();
-			
+			supplies -= 1;
+			playerMorale -= 2;
+			// scene6Function();
 		break;
 		
 		default:
