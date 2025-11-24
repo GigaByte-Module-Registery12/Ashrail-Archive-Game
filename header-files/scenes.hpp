@@ -92,7 +92,7 @@ cin>>choice;
 			cin.ignore();
 			cin.get();
 			clearConsoleFunction();
-			
+			// Implement a loop so it should ask again for user to enter correct input
 			
 		break;
 	}
@@ -146,6 +146,136 @@ cin>>choice;
 		case 2:
 			// call respective function of scene
 			clearConsoleFunction();
+			playerMorale -= 1;
+			scene4Function();
+		break;
+		
+		default:
+			endLineFunction(3);
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"Press enter to continue"<<endl;
+			cin.ignore();
+			cin.get();
+			clearConsoleFunction();
+			// Implement a loop so it should ask again for user to enter correct input
+			
+		break;
+	}
+
+
+	sceneID = 2;
+	return sceneID;
+	
+} // scene2Function() function ends here
+
+int scene3Function(){
+	
+	scene3Title();
+	
+	endLineFunction(1);
+	tabSpaceFunction(1);
+	cout<<"Effect: Fall risk - little bit damage on bones  "<<endl;
+	playerStatsFunction();
+	
+	tabSpaceFunction(5);
+	spaceFunction(4);
+	cout<<"Scene 3 - High Road Wind";
+	endLineFunction(2);
+	
+// Implemeting scene 3 story
+
+cout << "\t You climb the ruined overpass, boots clinking on rebar and fallen concrete. "
+<< "The wind catches\n  the loose fabric of your jacket and the world opens — far-off silhouettes of ruined machinery like\n  sleeping leviathans. "
+<< "Near the highest point, you see fresh footprints and, beneath them, a small\n  transistor radio tied to a broken guardrail. "
+<< "Someone was here recently. \n"<<endl;
+
+
+cout<<"  Choices: "<<endl;
+cout<<"  1: Examine the footprints closely and follow their direction. "<<endl;
+cout<<"  2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
+cout<<"  Select your choice(1 or 2): ";
+cin>>choice;
+
+
+	switch(choice){
+		case 1:
+			// call respective function of scene
+			clearConsoleFunction();
+			playerMorale += 2;
+			scene4Function();
+		break;
+	
+		case 2:
+			// call respective function of scene
+			clearConsoleFunction();
+			supplies += 2;
+			scene4Function();
+		break;
+		
+		default:
+			endLineFunction(3);
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"Press enter to continue"<<endl;
+			cin.ignore();
+			cin.get();
+			clearConsoleFunction();
+			// Implement a loop so it should ask again for user to enter correct input
+			
+		break;
+	}
+
+
+
+	sceneID = 3;
+	return sceneID;
+	
+} // scene3()Function function ends here
+
+
+int scene4Function(){
+	
+	// scene4Title();
+	
+	endLineFunction(1);
+	tabSpaceFunction(1);
+	cout<<"Effect: "<<endl;
+	playerStatsFunction();
+	
+	tabSpaceFunction(5);
+	spaceFunction(4);
+	cout<<"Scene 4 - Roadside Camp";
+	endLineFunction(2);
+	
+// Implemeting scene 4 story
+
+
+
+cout<<"  Choices: "<<endl;
+cout<<"  1: "<<endl;
+cout<<"  2:  \n"<<endl;
+cout<<"  Select your choice(1 or 2): ";
+cin>>choice;
+
+
+	switch(choice){
+		case 1:
+			// call respective function of scene
+			clearConsoleFunction();
+		
+			
+		break;
+	
+		case 2:
+			// call respective function of scene
+			clearConsoleFunction();
 			
 		break;
 		
@@ -160,39 +290,17 @@ cin>>choice;
 			cin.ignore();
 			cin.get();
 			clearConsoleFunction();
-			
+			// Implement a loop so it should ask again for user to enter correct input
 			
 		break;
 	}
 
 
-	sceneID = 2;
-	return sceneID;
-	
-} // scene2() function ends here
 
-int scene3Function(){
-	
-	scene3Title();
-	
-	endLineFunction(1);
-	tabSpaceFunction(1);
-	cout<<"Effect: Fall risk - little bit damage on bones  "<<endl;
-	playerStatsFunction();
-	
-	
-	cout<<"scene 3"<<endl;
-	sceneID = 3;
-	return sceneID;
-	
-} // scene3()Function function ends here
-
-
-int scene4Function(){
-	
 	sceneID = 4;
 	return sceneID;
-} // scene4Function() ends here
+	
+} // scene4()Function function ends here
 
 
 void allScenes(){
