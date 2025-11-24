@@ -194,7 +194,7 @@ string ashrailValley = R"(
 
 cout<<ashrailValley<<endl;
 
-endLineFunction(5);
+endLineFunction(4);
 tabSpaceFunction(5);
 cout<<"Please press enter to continue.";
 cin.ignore();
@@ -207,8 +207,14 @@ void scene2Title(){
 
 clearConsoleFunction();
 
+// Ogre Ascii font style
 string scene2 = R"(
 
+                                              __                       ____
+                                             / _\ ___ ___ _ __   ___  |___ \
+                                             \ \ / __/ _ \ '_ \ / _ \   __) |
+                                             _\ \ (_|  __/ | | |  __/  / __/
+                                             \__/\___\___|_| |_|\___| |_____|
 
 
 
@@ -218,11 +224,24 @@ cout<<scene2<<endl;
 	
 endLineFunction(2);
 
+// Big Ascii font Style
+string riverBedShadows = R"(
+                   _____  _                _              _    _____ _               _                   
+                  |  __ \(_)              | |            | |  / ____| |             | |                  
+                  | |__) |___   _____ _ __| |__   ___  __| | | (___ | |__   __ _  __| | _____      _____ 
+                  |  _  /| \ \ / / _ \ '__| '_ \ / _ \/ _` |  \___ \| '_ \ / _` |/ _` |/ _ \ \ /\ / / __|
+                  | | \ \| |\ V /  __/ |  | |_) |  __/ (_| |  ____) | | | | (_| | (_| | (_) \ V  V /\__ \
+                  |_|  \_\_| \_/ \___|_|  |_.__/ \___|\__,_| |_____/|_| |_|\__,_|\__,_|\___/ \_/\_/ |___/
+                                                                                                         
+                                                                                                         
 
+)";
+
+cout<<riverBedShadows<<endl;	
 	
-	
-endLineFunction(5);
+endLineFunction(4);
 tabSpaceFunction(5);
+spaceFunction(4);
 cout<<"Please press enter to continue.";
 cin.ignore();
 cin.get();
@@ -230,5 +249,259 @@ clearConsoleFunction();
 	
 } // scene2Title() function ends here
 
+
+
+void scene3Title(){
+clearConsoleFunction();
+
+string scene3 = R"(
+
+)";
+
+cout<<scene3<<endl;
+
+endLineFunction(2);
+
+string highRoadWind = R"(
+
+
+
+)";
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene3Ttile() function ends here
+
+
+void scene4Title(){
+clearConsoleFunction();
+
+string scene4 = R"(
+
+)";
+
+cout<<scene4<<endl;
+
+endLineFunction(2);
+
+string roadSideCamp = R"(
+
+
+
+)";
+
+cout<<roadSideCamp<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene4Ttile() function ends here
+
+
+void scene5Title(){
+clearConsoleFunction();
+
+string scene5 = R"(
+
+)";
+
+cout<<scene5<<endl;
+
+endLineFunction(2);
+
+string sirCompilerTalk = R"(
+
+
+
+)";
+
+cout<<sirCompilerTalk<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene5Ttile() function ends here
+
+void scene6Title(){
+clearConsoleFunction();
+
+string scene6 = R"(
+
+)";
+
+cout<<scene6<<endl;
+
+endLineFunction(2);
+
+string theArchive = R"(
+
+
+
+)";
+
+cout<<theArchive<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene6Ttile() function ends here
+
+void scene7Title(){
+clearConsoleFunction();
+
+string scene7 = R"(
+
+)";
+
+cout<<scene7<<endl;
+
+endLineFunction(2);
+
+string insideArhive = R"(
+
+
+
+)";
+
+cout<<insideArhive<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene7Ttile() function ends here
+
+
+void scene8Title(){
+clearConsoleFunction();
+
+string scene8 = R"(
+
+)";
+
+cout<<scene8<<endl;
+
+endLineFunction(2);
+
+string alarmedRetreat = R"(
+
+
+
+)";
+
+cout<<alarmedRetreat<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene8Ttile() function ends here
+
+void scene9Title(){
+clearConsoleFunction();
+
+string scene9 = R"(
+
+)";
+
+cout<<scene9<<endl;
+
+endLineFunction(2);
+
+string truthAndBurden = R"(
+
+
+
+)";
+
+cout<<truthAndBurden<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene9Ttile() function ends here
+
+void scene10Title(){
+clearConsoleFunction();
+
+string scene10 = R"(
+
+)";
+
+cout<<scene10<<endl;
+
+endLineFunction(2);
+
+string caravanChance = R"(
+
+
+
+)";
+
+cout<<caravanChance<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene10Ttile() function ends here
+
+void scene11Title(){
+clearConsoleFunction();
+
+string scene11 = R"(
+
+)";
+
+cout<<scene11<<endl;
+
+endLineFunction(2);
+
+string memoryHands = R"(
+
+
+
+)";
+
+cout<<memoryHands<<endl;
+	
+endLineFunction(4);
+tabSpaceFunction(5);
+spaceFunction(4);
+cout<<"Please press enter to continue.";
+cin.ignore();
+cin.get();
+clearConsoleFunction();
+} // scene11Ttile() function ends here
 
 #endif // UI_HPP
