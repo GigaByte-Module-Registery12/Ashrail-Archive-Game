@@ -21,15 +21,29 @@ using namespace std;
 #include "globalVars.hpp" // contains global variable
 
 // function declaration
-void startSceneTitle();
 void playerStatsFunction();
 void clearConsoleFunction();
+
+// function declaration of scenes
 int scene2Function();
 int scene3Function();
+int scene4Function();
+int scene5Function();
+
+// function declaration of scene titles
+void startSceneTitle();
 void scene2Title();
 void scene3Title();
 void scene4Title();
-int scene4Function();
+void scene5Title();
+void scene6Title();
+void scene7Title();
+void scene8Title();
+void scene9Title();
+void scene10Title();
+void scene11Title();
+
+
 
 
 // First Starting scenes
@@ -310,6 +324,67 @@ cin>>choice;
 	
 } // scene4()Function function ends here
 
+
+
+int scene5Function(){
+	
+	 scene5Title();
+	
+	endLineFunction(2);
+	playerStatsFunction();
+	
+	tabSpaceFunction(5);
+	spaceFunction(4);
+	cout<<"Scene 5 - Conversation with Sir Complier";
+	endLineFunction(2);
+	
+// Implemeting scene 4 story
+
+
+cout<<"  Choices: "<<endl;
+cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
+cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
+cout<<"  Select your choice(1 or 2): ";
+cin>>choice;
+
+
+	switch(choice){
+		case 1:
+			// call respective function of scene
+			clearConsoleFunction();
+			
+			
+		break;
+	
+		case 2:
+			// call respective function of scene
+			clearConsoleFunction();
+			
+			
+		break;
+		
+		default:
+			endLineFunction(3);
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"Press enter to continue"<<endl;
+			cin.ignore();
+			cin.get();
+			clearConsoleFunction();
+			// Implement a loop so it should ask again for user to enter correct input
+			
+		break;
+	}
+
+
+
+	sceneID = 5;
+	return sceneID;
+	
+} // scene5()Function function ends here
 
 void allScenes(){
 
