@@ -27,7 +27,7 @@ int supplies = 3;
 int choice = 0;
 int sceneID = 0;
 string playerName = "Arin";
-// character encounter flag(not sure going to use or not)
+// character encounter flag(probably going to use this)
 bool metSirComplier, metBangaliBaba, metSigmaTemp100;
 bool gameRunning = true;
 
