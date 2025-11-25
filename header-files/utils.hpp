@@ -48,7 +48,13 @@ void pauseFunction(string str){
 	
 } // pauseFunction() ends here.
 
-
+void sceneChoiceRevealFunction(){
+	
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	pauseFunction("reveal the choices! ");
+	
+} // sceneChoiceRevealFunction() ends here
 
 
 #endif // UTILS_HPP

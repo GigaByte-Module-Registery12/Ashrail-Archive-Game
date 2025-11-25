@@ -243,12 +243,10 @@ string ashrailValley = R"(
 
 cout<<ashrailValley<<endl;
 
-endLineFunction(4);
-tabSpaceFunction(5);
-// cout<<"Please press enter to continue.";
-// cin.ignore();
-// cin.get();
-pauseFunction("continue"); // responsible for pausing and showing key to user to continue
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
+cin.get();
 clearConsoleFunction();
 
 } // startSceneTitle() function ends here
@@ -289,11 +287,9 @@ string riverBedShadows = R"(
 
 cout<<riverBedShadows<<endl;	
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 	
@@ -318,11 +314,9 @@ string highRoadWind = R"(
 
 )";
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene3Ttile() function ends here
@@ -374,11 +368,9 @@ string sirCompilerTalk = R"(
 
 cout<<sirCompilerTalk<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene5Ttile() function ends here
@@ -402,11 +394,9 @@ string theArchive = R"(
 
 cout<<theArchive<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene6Ttile() function ends here
@@ -430,11 +420,9 @@ string insideArhive = R"(
 
 cout<<insideArhive<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene7Ttile() function ends here
@@ -459,11 +447,9 @@ string alarmedRetreat = R"(
 
 cout<<alarmedRetreat<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene8Ttile() function ends here
@@ -487,11 +473,9 @@ string truthAndBurden = R"(
 
 cout<<truthAndBurden<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene9Ttile() function ends here
@@ -515,11 +499,9 @@ string caravanChance = R"(
 
 cout<<caravanChance<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene10Ttile() function ends here
@@ -543,11 +525,9 @@ string memoryHands = R"(
 
 cout<<memoryHands<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
 cin.get();
 clearConsoleFunction();
 } // scene11Ttile() function ends here

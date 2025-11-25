@@ -84,19 +84,14 @@ cout<<"\t The last message you heard on the radio was a voice promising refuge a
 cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
 	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
 
-tabSpaceFunction(1);
-spaceFunction(1);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
-tabSpaceFunction(1);
-cout<<" Choices: \n"<<endl;
-tabSpaceFunction(1);
-cout<<" 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-tabSpaceFunction(1);
-cout<<" 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+
+cout<<"\t Choices: \n"<<endl;
+cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
 	<<"you can see ahead. \n"<<endl;
-tabSpaceFunction(1);
-cout<<"  Select your choice (1 or 2): ";
+cout<<"\t  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -144,30 +139,30 @@ int scene2Function(){
 	
 	endLineFunction(1);
 	tabSpaceFunction(1);
-	cout<<"Effect: Mud slows you down "<<endl;
+	cout<<"Effect Of Your Choice: Mud slows you down "<<endl;
 	playerStatsFunction();
+	endLineFunction(1);
 	
 	tabSpaceFunction(5);
-	spaceFunction(6);
+	spaceFunction(8);
 	cout<<"Scene 2 - Riverbed Shadows";
 	endLineFunction(2);
 	
 // Implemeting scene 2 story
-cout << "\t You pick your way along the riverbed. "
-<< " Mist clings to low metal and the bones of houses.\n "
-<< " You pass a decayed playground where a swing moves once with the wind. "
-<< " Water here is tainted;\n  you ration what you have. "
-<< " Around a bend, a figure sits by a makeshift stove: "
-<< " a thin man in a\n  patched coat humming a slow tune. "
-<< " He lifts his head and smiles with tired teeth. \n"<<endl;
+cout<<"\t You pick your way along the riverbed. Mist clings to low metal "
+	<<"and the bones of houses. You pass a decayed\n \t playground wherea swing "
+	<<"moves once with the wind. \n"<<endl;
+	
+cout<<"\t Water here is tainted; you ration what you have. Around a bend, a figure sits by a"
+	<<"makeshift stove: a thin\n \t man in a patched coat humming a slow tune. He lifts his "
+	<<"head and smiles with tired teeth.\n"<<endl;
 
-spaceFunction(2);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
-cout<<"  Choices: "<<endl;
-cout<<"  1: Approch and speak to him.(optional)"<<endl;
-cout<<"  2: Avoid him and move on; better not to chance trouble. \n"<<endl;
-cout<<"  Select your choice (1 or 2): ";
+cout<<"\t Choices: \n"<<endl;
+cout<<"\t 1: Approch and speak to him.(optional)"<<endl;
+cout<<"\t 2: Avoid him and move on; better not to chance trouble. \n"<<endl;
+cout<<"\t  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -179,19 +174,23 @@ cin>>choice;
 			// Choice 1 of meeting with Bangali Baba
 		
 			
-			endLineFunction(3);
-			tabSpaceFunction(3);
-			cout<<"\t You Choose to speak to him, he offers a warm can of stew and a short story "
-				<<"about the old libraries. He asks nothing in return. He gives you a scrap of "
-				<<"cloth that can be used as bandage, and tells you a riddle hinting that The "
-				<<"Archive keeps its main gate code hidden in 'lines of speech' \n"<<endl;
+			endLineFunction(4);
+			tabSpaceFunction(6);
+			cout<<"You Choose to speak to him \n"<<endl;
+			
+			endLineFunction(2);
+cout<<"\t \t He offers a warm can of stew and a short story about the old libraries. "
+	<<"He asks nothing\n \n \t \t in return. He gives you a scrap of cloth that can be used "
+	<<"as bandage, and tells you\n \n \t \t a riddle hinting that The Archive keeps its main "
+	<<"gate code hidden in 'lines of speech'. \n"<<endl;
 			playerHealth += 5;
 			playerMorale += 3;
 			metBangaliBaba = true; // if true means higher success rate of succeding the game
 			
-			tabSpaceFunction(5);
-			spaceFunction(4);
-			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
+			endLineFunction(4);
+			tabSpaceFunction(6);
+			pauseFunction("continue"); // coming from utils.hpp
+			cin.get();
 			clearConsoleFunction();
 			
 			
@@ -232,7 +231,7 @@ int scene3Function(){
 	
 	endLineFunction(1);
 	tabSpaceFunction(1);
-	cout<<"Effect: Fall risk - little bit damage on bones  "<<endl;
+	cout<<"Effect Of Your Choice: Fall risk - little bit damage on bones  "<<endl;
 	playerStatsFunction();
 	
 	tabSpaceFunction(5);
@@ -247,8 +246,7 @@ cout << "\t You climb the ruined overpass, boots clinking on rebar and fallen co
 << "Near the highest point, you see fresh footprints and, beneath them, a small\n  transistor radio tied to a broken guardrail. "
 << "Someone was here recently. \n"<<endl;
 
-spaceFunction(2);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
 cout<<"  Choices: "<<endl;
 cout<<"  1: Examine the footprints closely and follow their direction. "<<endl;
@@ -317,8 +315,7 @@ cout << "\t By midday you reach a crossroads of scorched billboards. "
 << "who talks loudly about his confidence while fussing with a scarf. "
 << "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
 
-spaceFunction(2);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
 cout<<"  Choices: "<<endl;
 cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
@@ -390,8 +387,7 @@ cout << "\t You sit by the laptop as the man adjusts his spectacles. He introduc
      << "and writes a short diagram that hints\n  at the Archive's gate being controlled "
      << "by an old logic sequence. \n" << endl;
 
-spaceFunction(2);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
 cout<<"  Choices: "<<endl;
 cout<<"  1: Ask Sir Complier for a direct route map to The Archive. "<<endl;
@@ -447,11 +443,11 @@ int scene6Function(){
 	if (choice == 1){
 		endLineFunction(1);
 		tabSpaceFunction(1);
-		cout<<"Effect: Supplies Increases as he shares a cached map.  "<<endl;
+		cout<<"Effect Of Your Choice: Supplies Increases as he shares a cached map.  "<<endl;
 		}  else if (choice == 2) {
 		endLineFunction(1);
 		tabSpaceFunction(1);
-		cout<<"Effect: You get a hint for final Puzzle and you stores it as a string. "<<endl;
+		cout<<"Effect Of Your Choice: You get a hint for final Puzzle and you stores it as a string. "<<endl;
 			}
 	playerStatsFunction();
 	choice = 0; // setting the choice to default value
@@ -472,8 +468,7 @@ cout << "\t The terrain eases and you see the hulking mass of The Archive ahead:
      << "gave about a three-word key. "
      << "The terminal awaits input: three words, separated\n   by spaces. \n" << endl;
 
-spaceFunction(2);
-pauseFunction("reveal the choices! ");
+sceneChoiceRevealFunction(); // coming from utils.hpp
 
 cout<<"  Choices: "<<endl;
 cout<<"  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
