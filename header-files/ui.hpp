@@ -205,7 +205,7 @@ void playerStatsFunction(){
 	spaceFunction(3);
 	cout<<"Supplies: "<<supplies;
 
-	endLineFunction(4);
+	endLineFunction(2);
 
 } // playerStatsFunction() function ends here
 

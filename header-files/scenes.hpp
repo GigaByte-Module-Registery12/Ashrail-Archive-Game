@@ -56,34 +56,46 @@ void scene11Title();
 int startScene() {
 	
 	startSceneTitle();
+	tabSpaceFunction(1);
+	spaceFunction(1);
 	playerStatsFunction();
 	
 	// Implementing scene 1 story
 
-	
-	tabSpaceFunction(4);
-	spaceFunction(4);
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
 	cout<<"Scene 1 - Prologue: The Ashrail Valley";
 	endLineFunction(2);
 
-	cout << "\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-<< "The world\n  you remember — streets of hum and glowing ads — is gone, traded for rust and wind "
-<< "that carries the\n  metallic tang of old fires. They call this wasteland Ashrail Valley: a "
-<< "frayed ribbon of cracked highway,\n  collapsed overpasses, and skeletal towers that once hosted voices. " 
-<< "You have a pack with a few tins,\n  a battered radio that rarely finds a signal, and a worn notebook "
-<< "with a name on the first page: "<<playerName<<".\n  The last message you heard on the radio was a voice " 
-<< "promising refuge at an old data repository known\n  as The Archive, a place of records and machines" 
-<< "that might still answer questions about the Event.\n  Today you decide to set out toward The Archive," 
-<<"but the road forks where the highway is split by a\n  collapsed overpass. \n"
-<< endl;
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
 
-spaceFunction(2);
+tabSpaceFunction(1);
+spaceFunction(1);
 pauseFunction("reveal the choices! ");
 
-cout<<"  Choices: "<<endl;
-cout<<"  1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-cout<<"  2: Climb the broken overpass and take the high road -- risk of exposure, but faster\n "
-<<"    you can see ahead. \n"<<endl;
+tabSpaceFunction(1);
+cout<<" Choices: \n"<<endl;
+tabSpaceFunction(1);
+cout<<" 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+tabSpaceFunction(1);
+cout<<" 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+	<<"you can see ahead. \n"<<endl;
+tabSpaceFunction(1);
 cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
@@ -136,7 +148,7 @@ int scene2Function(){
 	playerStatsFunction();
 	
 	tabSpaceFunction(5);
-	spaceFunction(4);
+	spaceFunction(6);
 	cout<<"Scene 2 - Riverbed Shadows";
 	endLineFunction(2);
 	
@@ -224,7 +236,7 @@ int scene3Function(){
 	playerStatsFunction();
 	
 	tabSpaceFunction(5);
-	spaceFunction(4);
+	spaceFunction(6);
 	cout<<"Scene 3 - High Road Wind";
 	endLineFunction(2);
 	
@@ -291,7 +303,7 @@ int scene4Function(){
 	playerStatsFunction();
 	
 	tabSpaceFunction(5);
-	spaceFunction(4);
+	spaceFunction(8);
 	cout<<"Scene 4 - Roadside Camp";
 	endLineFunction(2);
 	
@@ -361,8 +373,8 @@ int scene5Function(){
 	endLineFunction(2);
 	playerStatsFunction();
 	
-	tabSpaceFunction(5);
-	spaceFunction(4);
+	tabSpaceFunction(4);
+	spaceFunction(6);
 	cout<<"Scene 5 - Conversation with Sir Complier";
 	endLineFunction(2);
 	

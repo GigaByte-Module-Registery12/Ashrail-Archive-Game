@@ -41,7 +41,7 @@ void playOrNotInputFunction(){
 	
 	endLineFunction(4);		// function for breaking the lines in utils.hpp
 	tabSpaceFunction(5);	// function for space of tab in utils.hpp
-//	spaceFunction(7); 		// function foronly space  in utils.hpp
+	spaceFunction(3); 		// function foronly space  in utils.hpp
 	cout<<"Do you want to play the game(Y/N): ";
 	cin>>playOrNotNamespace::playOrNot;
 	endLineFunction(2);
