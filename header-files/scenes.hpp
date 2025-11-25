@@ -313,40 +313,38 @@ int scene4Function(){
 	
 	 scene4Title();
 	
-	endLineFunction(2);
+	endLineFunction(1);
 	playerStatsFunction();
 	
+	endLineFunction(1);
 	tabSpaceFunction(5);
 	spaceFunction(8);
 	cout<<"Scene 4 - Roadside Camp";
-	endLineFunction(2);
+	endLineFunction(3);
 	
 // Implemeting scene 4 story
 
-cout<< "\t By midday you reach a crossroads of scorched billboards. "
-	<< "A small camp of tarps and salvaged metal\n  stands by the road. "
-	<< "Laughter — thin but genuine — drifts out. "
-	<< "Among the campers are three notable figures\n  who chat and trade: a tall man "
-	<< "with spectacles and an old laptop, a cheerful figure who offers tea, and\n  a man "
-	<< "who talks loudly about his confidence while fussing with a scarf. "
-	<< "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
+cout<<"\t By midday you reach a crossroads of scorched billboards. A small camp of tarps "
+	<<"and salvaged metal stands\n \t by the road. \n "<<endl;
+	
+cout<<"\t Laughter - thin but genuine — drifts out. Among the campers are three notable "
+	<<"figures.. \n"<<endl;
 
-endLineFunction(2);
-tabSpaceFunction(2);
+cout<<"\t who chat and trade: a tall man with spectacles and an old laptop, and a cheerful "
+	<<"figure who offers tea,\n \t and a man who talks about his confidence while fussing with "
+	<<"a scarf. \n"<<endl;
+	
+cout<<"\t They watch you with curiosity; the laptop man particularly interesting to you, "
+	<<"cause he is holding a\n \t laptop in this time. \n"<<endl;
+
+endLineFunction(1);
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"  Choices: \n"<<endl;
 
-tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
-
-tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
-cout<<"  Select your choice (1 or 2): ";
+cout<<"\t Choices: \n"<<endl;
+cout<<"\t 1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
+cout<<"\t 2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
+cout<<"\t  Select your choice (1 or 2): ";
 cin>>choice;
 
 
