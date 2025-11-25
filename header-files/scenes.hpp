@@ -234,23 +234,46 @@ int scene3Function(){
 	cout<<"Effect Of Your Choice: Fall risk - little bit damage on bones  "<<endl;
 	playerStatsFunction();
 	
+	endLineFunction(2);
 	tabSpaceFunction(5);
-	spaceFunction(6);
+	spaceFunction(7);
 	cout<<"Scene 3 - High Road Wind";
 	endLineFunction(2);
 	
 // Implemeting scene 3 story
 
-cout << "\t You climb the ruined overpass, boots clinking on rebar and fallen concrete. "
-<< "The wind catches\n  the loose fabric of your jacket and the world opens — far-off silhouettes of ruined machinery like\n  sleeping leviathans. "
-<< "Near the highest point, you see fresh footprints and, beneath them, a small\n  transistor radio tied to a broken guardrail. "
-<< "Someone was here recently. \n"<<endl;
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<"You climb the ruined overpass, boots clinking on rebar and fallen concrete. \n"<<endl;
 
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<"The wind catches the loose fabric of your jacket and the world opens - far-off \n"
+	<<"\t \t \tsilhouettes of ruined machinery like  sleeping leviathans. \n"<<endl;
+	
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<"Near the highest point, you see fresh footprints and, beneath them, a small\n "
+	<<"\t \t \ttransistor radio tied to a broken guardrail. Someone was here recently. \n"<<endl;
+
+endLineFunction(2);
+tabSpaceFunction(2);
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-cout<<"  Choices: "<<endl;
-cout<<"  1: Examine the footprints closely and follow their direction. "<<endl;
-cout<<"  2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<" Choices: \n"<<endl;
+
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<" 1: Examine the footprints closely and follow their direction. "<<endl;
+
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<" 2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
+
+tabSpaceFunction(2);
+spaceFunction(6);
 cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 

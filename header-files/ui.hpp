@@ -333,18 +333,17 @@ cout<<scene4<<endl;
 
 endLineFunction(2);
 
-string roadSideCamp = R"(
+string RoadSideCamp = R"(
 
 
 
 )";
-
-cout<<roadSideCamp<<endl;
 	
-endLineFunction(4);
-tabSpaceFunction(5);
-spaceFunction(4);
-pauseFunction("continue"); // responsible for pausing and showing key to user to continue
+	
+endLineFunction(2);
+tabSpaceFunction(6);
+pauseFunction("continue"); // coming from utils.hpp
+cin.get();
 clearConsoleFunction();
 } // scene4Ttile() function ends here
 
