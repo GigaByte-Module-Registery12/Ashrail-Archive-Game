@@ -391,32 +391,38 @@ int scene5Function(){
 	
 	 scene5Title();
 	
-	endLineFunction(2);
 	playerStatsFunction();
 	
+	endLineFunction(1);
 	tabSpaceFunction(4);
-	spaceFunction(6);
+	spaceFunction(7);
 	cout<<"Scene 5 - Conversation with Sir Complier";
-	endLineFunction(2);
+	endLineFunction(3);
 	
 // Implemeting scene 5 story
-cout << "\t You sit by the laptop as the man adjusts his spectacles. He introduces himself with " 
-	 << "a calm dignity:\n  he calls himself Sir Compiler. "
-     << "His fingers are scarred from soldering and nights spent coaxing old servers\n  back to life. "
-     << "He speaks carefully about architectures "
-     << "and about how knowledge survived in strange ways\n  after the Event. You say, half in jest " 
-     << "and half in awe, I can only explain your greatness only and only\n  using infinite while loop "
-     << "He smiles and replies with a patience, he agrees to answer a few questions but\n  "
-     << "pauses on some and says — No, kid, not right now, ask this later  — "
-     << "and writes a short diagram that hints\n  at the Archive's gate being controlled "
-     << "by an old logic sequence. \n" << endl;
 
+cout<<"\t You sit by the laptop as the man adjusts his spectacles. He introduces himself with "
+	<<"a calm dignity; he\n \t calls himself Sir Compiler. \n"<<endl;
+	
+cout<<"\t His fingers are scarred from writing code, soldering and nights spent coaxing old "
+	<<"servers back to life. \n \t He speaks carefully about Programming Languages, CPU and "
+	<<"Computer architectures and about how knowledge\n \t survived in strange ways after "
+	<<"the Event. \n"<<endl;
+
+cout<<"\t You say, half in jest, and half in awe, I can only explain your programming greatness "
+	<<"only and only\n \t using infinite while loop. \n"<<endl;
+
+cout<<"\t He smiles and replies with a patience, he agrees to answer a few questions but "
+	<<"pauses on some and says\n \t - No, kid, not right now, ask this later. and he writes "
+	<<"you a short diagram that hints at the Archive's\n \t gate being controlled by an old "
+	<<"logic sequence. \n "<<endl;
+	
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-cout<<"  Choices: "<<endl;
-cout<<"  1: Ask Sir Complier for a direct route map to The Archive. "<<endl;
-cout<<"  2: Ask about the Archive's gate key and the 'lines of speech' riddle. \n"<<endl;
-cout<<"  Select your choice (1 or 2): ";
+cout<<"\t  Choices: \n"<<endl;
+cout<<"\t  1: Ask Sir Complier for a direct route map to The Archive. "<<endl;
+cout<<"\t  2: Ask about the Archive's gate key and the 'lines of speech' riddle. \n"<<endl;
+cout<<"\t   Select your choice (1 or 2): ";
 cin>>choice;
 
 
