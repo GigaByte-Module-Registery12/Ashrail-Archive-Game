@@ -62,55 +62,10 @@ void gamePlayingOrNotFunction(){
 		
 		
 	} else if (playOrNotNamespace::playOrNot == 'n' || playOrNotNamespace::playOrNot == 'N'){
-		// player not want to play
-		// calling playOrNot char type variable from playOrNotNamespace which is in input.hpp
+		// ** DEBUG REQUIRED **
+		 playerNotPlaysGame(); // if user did n or N meaning no
+		// this playNotPlaysGame(); function working here
 		
-		// system("cls");
-		clearConsoleFunction(); // clear the console screen
-		endLineFunction(4);		// function for breaking the lines in utils.hpp
-		tabSpaceFunction(5);	// function for space of tab in utils.hpp
-		//	spaceFunction(7); 	// function foronly space  in utils.hpp
-		// Below text want to center it in console Terminal
-		cout<<"GO TO HELL AND CLOSE THIS PROGRAM"<<endl;
-		endLineFunction(2);		// function for breaking the lines in utils.hpp
-		
-		string gunExit = R"(
-		
-		
-                                                      ^
-                                                     | |
-                                                   @#####@
-                                                 (###   ###)-.
-                                               .(###     ###) \
-                                              /  (###   ###)   )
-                                             (=-  .@#####@|_--"
-                                             /\    \_|l|_/ (\
-                                            (=-\     |l|    /
-                                             \  \.___|l|___/
-                                             /\      |_|   /
-                                            (=-\._________/\
-                                             \             /
-                                               \._________/
-                                                 #  ----  #
-                                                 #   __   #
-                                                 \########/
-
-		
-		
-		)";
-		cout<<gunExit<<endl;
-		endLineFunction(2);
-		tabSpaceFunction(5);	// function for space of tab in utils.hpp
-		// Below text want to center it in console Terminal
-		cout<<"Press enter to close the program"<<endl;
-		endLineFunction(2);
-		cin.ignore();
-		cin.get();
-		clearConsoleFunction();
-		exit(0); // exit from the program, using this from cstdlib header file
-		
-	
-			
 		
 	} else {
 		endLineFunction(5);		// function for breaking the lines in utils.hpp
@@ -119,9 +74,12 @@ void gamePlayingOrNotFunction(){
 		// Below text want to center it in console Terminal
 		cout<<"Hey man, can't you just understand you have to add Y for yes and N for No"<<endl;
 		endLineFunction(2);
-		cout<<"Press any key to continue";
-		cin.ignore();
+		tabSpaceFunction(5);
+		spaceFunction(4);
+		pauseFunction("continue");
+		cin.get();
 		clearConsoleFunction();
+	
 		while(playOrNotNamespace::playOrNot != 'y' || playOrNotNamespace::playOrNot != 'Y' || playOrNotNamespace::playOrNot != 'n' || playOrNotNamespace::playOrNot != 'N'){
 		playOrNotInputFunction();
 		clearConsoleFunction();
@@ -130,10 +88,13 @@ void gamePlayingOrNotFunction(){
 			// make a function which is going to be the game(containing all scenes) and call that in input first if above same function here
 		allScenes();
 		break;		
-			}
+			} else if (playOrNotNamespace::playOrNot == 'n' || playOrNotNamespace::playOrNot == 'N') {
+				// ** DEBUG REQUIRED **
+		// playerNotPlaysGame(); // if user did n or N meaning no
+		// this playNotPlaysGame(); function working here
+				}
 	} // while loop ends here
-
-
+	
 	}
 		
 	

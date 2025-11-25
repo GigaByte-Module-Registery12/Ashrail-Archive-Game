@@ -29,6 +29,12 @@ int scene2Function();
 int scene3Function();
 int scene4Function();
 int scene5Function();
+int scene6Function();
+// int scene7Function();
+// int scene8Function();
+// int scene9Function();
+// int scene10Function();
+// int scene11Function();
 
 // function declaration of scene titles
 void startSceneTitle();
@@ -71,11 +77,14 @@ int startScene() {
 <<"but the road forks where the highway is split by a\n  collapsed overpass. \n"
 << endl;
 
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
+
 cout<<"  Choices: "<<endl;
 cout<<"  1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
 cout<<"  2: Climb the broken overpass and take the high road -- risk of exposure, but faster\n "
 <<"    you can see ahead. \n"<<endl;
-cout<<"  Select your choice(1 or 2): ";
+cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -103,9 +112,7 @@ cin>>choice;
 			cout<<"You have to enter 1 or 2 \n"<<endl;
 			tabSpaceFunction(5);
 			spaceFunction(4);
-			cout<<"Press enter to continue"<<endl;
-			cin.ignore();
-			cin.get();
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 			clearConsoleFunction();
 			// Implement a loop so it should ask again for user to enter correct input
 			
@@ -142,11 +149,13 @@ cout << "\t You pick your way along the riverbed. "
 << " a thin man in a\n  patched coat humming a slow tune. "
 << " He lifts his head and smiles with tired teeth. \n"<<endl;
 
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
 
 cout<<"  Choices: "<<endl;
-cout<<"  1: Approch and speak to him."<<endl;
+cout<<"  1: Approch and speak to him.(optional)"<<endl;
 cout<<"  2: Avoid him and move on; better not to chance trouble. \n"<<endl;
-cout<<"  Select your choice(1 or 2): ";
+cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -154,8 +163,28 @@ cin>>choice;
 		case 1:
 			// call respective function of scene
 			clearConsoleFunction();
+			
+			// Choice 1 of meeting with Bangali Baba
+		
+			
+			endLineFunction(3);
+			tabSpaceFunction(3);
+			cout<<"\t You Choose to speak to him, he offers a warm can of stew and a short story "
+				<<"about the old libraries. He asks nothing in return. He gives you a scrap of "
+				<<"cloth that can be used as bandage, and tells you a riddle hinting that The "
+				<<"Archive keeps its main gate code hidden in 'lines of speech' \n"<<endl;
+			playerHealth += 5;
 			playerMorale += 3;
+			metBangaliBaba = true; // if true means higher success rate of succeding the game
+			
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
+			clearConsoleFunction();
+			
+			
 			scene4Function();
+		
 		break;
 	
 		case 2:
@@ -172,9 +201,7 @@ cin>>choice;
 			cout<<"You have to enter 1 or 2 \n"<<endl;
 			tabSpaceFunction(5);
 			spaceFunction(4);
-			cout<<"Press enter to continue"<<endl;
-			cin.ignore();
-			cin.get();
+			
 			clearConsoleFunction();
 			// Implement a loop so it should ask again for user to enter correct input
 			
@@ -208,11 +235,13 @@ cout << "\t You climb the ruined overpass, boots clinking on rebar and fallen co
 << "Near the highest point, you see fresh footprints and, beneath them, a small\n  transistor radio tied to a broken guardrail. "
 << "Someone was here recently. \n"<<endl;
 
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
 
 cout<<"  Choices: "<<endl;
 cout<<"  1: Examine the footprints closely and follow their direction. "<<endl;
 cout<<"  2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
-cout<<"  Select your choice(1 or 2): ";
+cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -239,9 +268,7 @@ cin>>choice;
 			cout<<"You have to enter 1 or 2 \n"<<endl;
 			tabSpaceFunction(5);
 			spaceFunction(4);
-			cout<<"Press enter to continue"<<endl;
-			cin.ignore();
-			cin.get();
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 			clearConsoleFunction();
 			// Implement a loop so it should ask again for user to enter correct input
 			
@@ -278,10 +305,13 @@ cout << "\t By midday you reach a crossroads of scorched billboards. "
 << "who talks loudly about his confidence while fussing with a scarf. "
 << "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
 
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
+
 cout<<"  Choices: "<<endl;
 cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
 cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
-cout<<"  Select your choice(1 or 2): ";
+cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -289,8 +319,8 @@ cin>>choice;
 		case 1:
 			// call respective function of scene
 			clearConsoleFunction();
-			// scene5Function();
-			
+			scene5Function();
+			metSirComplier = true; // success chances higher if it is true
 		break;
 	
 		case 2:
@@ -298,7 +328,7 @@ cin>>choice;
 			clearConsoleFunction();
 			supplies -= 1;
 			playerMorale -= 2;
-			// scene6Function();
+			scene6Function();
 		break;
 		
 		default:
@@ -308,9 +338,7 @@ cin>>choice;
 			cout<<"You have to enter 1 or 2 \n"<<endl;
 			tabSpaceFunction(5);
 			spaceFunction(4);
-			cout<<"Press enter to continue"<<endl;
-			cin.ignore();
-			cin.get();
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 			clearConsoleFunction();
 			// Implement a loop so it should ask again for user to enter correct input
 			
@@ -338,13 +366,107 @@ int scene5Function(){
 	cout<<"Scene 5 - Conversation with Sir Complier";
 	endLineFunction(2);
 	
-// Implemeting scene 4 story
+// Implemeting scene 5 story
+cout << "\t You sit by the laptop as the man adjusts his spectacles. He introduces himself with " 
+	 << "a calm dignity:\n  he calls himself Sir Compiler. "
+     << "His fingers are scarred from soldering and nights spent coaxing old servers\n  back to life. "
+     << "He speaks carefully about architectures "
+     << "and about how knowledge survived in strange ways\n  after the Event. You say, half in jest " 
+     << "and half in awe, I can only explain your greatness only and only\n  using infinite while loop "
+     << "He smiles and replies with a patience, he agrees to answer a few questions but\n  "
+     << "pauses on some and says — No, kid, not right now, ask this later  — "
+     << "and writes a short diagram that hints\n  at the Archive's gate being controlled "
+     << "by an old logic sequence. \n" << endl;
 
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
 
 cout<<"  Choices: "<<endl;
-cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
-cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
-cout<<"  Select your choice(1 or 2): ";
+cout<<"  1: Ask Sir Complier for a direct route map to The Archive. "<<endl;
+cout<<"  2: Ask about the Archive's gate key and the 'lines of speech' riddle. \n"<<endl;
+cout<<"  Select your choice (1 or 2): ";
+cin>>choice;
+
+
+
+	switch(choice){
+		case 1:
+			// call respective function of scene
+			clearConsoleFunction();
+			supplies += 1;
+			playerMorale += 2;
+			scene6Function();
+		break;
+	
+		case 2:
+			// call respective function of scene
+			clearConsoleFunction();
+			playerMorale += 4;
+			scene6Function();
+			
+		break;
+		
+		default:
+			endLineFunction(3);
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			cout<<"You have to enter 1 or 2 \n"<<endl;
+			tabSpaceFunction(5);
+			spaceFunction(4);
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
+			clearConsoleFunction();
+			// Implement a loop so it should ask again for user to enter correct input
+			
+		break;
+	}
+
+	 
+	
+	sceneID = 5;
+	return sceneID;
+	
+} // scene5()Function function ends here
+
+
+int scene6Function(){
+	
+	 scene6Title();
+	
+	if (choice == 1){
+		endLineFunction(1);
+		tabSpaceFunction(1);
+		cout<<"Effect: Supplies Increases as he shares a cached map.  "<<endl;
+		}  else if (choice == 2) {
+		endLineFunction(1);
+		tabSpaceFunction(1);
+		cout<<"Effect: You get a hint for final Puzzle and you stores it as a string. "<<endl;
+			}
+	playerStatsFunction();
+	choice = 0; // setting the choice to default value
+	
+	tabSpaceFunction(5);
+	spaceFunction(4);
+	cout<<"Scene 6 - Approaching The Archive";
+	endLineFunction(2);
+	
+// Implemeting scene 6 story
+cout << "\t The terrain eases and you see the hulking mass of The Archive ahead: a dome of "
+	 << "corrugated\n   metal and glass, half-buried in silt. "
+     << "Its entrance is a rusted door marked with faded labels in\n   several languages. An " 
+     << "old terminal sits to one side, its screen cracked but dark. "
+     << "Around the door,\n   six plaques hold fragments of text — torn, half-melted lines that " 
+     << "look like parts of poems, error\n   logs, and radio transcripts. "
+     << "You remember Bangali Baba’s riddle about “lines of speech” and the\n   hint Sir Compiler "
+     << "gave about a three-word key. "
+     << "The terminal awaits input: three words, separated\n   by spaces. \n" << endl;
+
+spaceFunction(2);
+pauseFunction("reveal the choices! ");
+
+cout<<"  Choices: "<<endl;
+cout<<"  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
+cout<<"  2: Use brute force - try common archive keys you heard on the radio and the scraps \n"<<endl;
+cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
 
@@ -353,12 +475,10 @@ cin>>choice;
 			// call respective function of scene
 			clearConsoleFunction();
 			
-			
 		break;
 	
 		case 2:
 			// call respective function of scene
-			clearConsoleFunction();
 			
 			
 		break;
@@ -370,9 +490,7 @@ cin>>choice;
 			cout<<"You have to enter 1 or 2 \n"<<endl;
 			tabSpaceFunction(5);
 			spaceFunction(4);
-			cout<<"Press enter to continue"<<endl;
-			cin.ignore();
-			cin.get();
+			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 			clearConsoleFunction();
 			// Implement a loop so it should ask again for user to enter correct input
 			
@@ -381,10 +499,10 @@ cin>>choice;
 
 
 
-	sceneID = 5;
+	sceneID = 6;
 	return sceneID;
 	
-} // scene5()Function function ends here
+} // scene6()Function function ends here
 
 void allScenes(){
 
