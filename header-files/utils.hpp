@@ -41,10 +41,14 @@ void tabSpaceFunction(int t){
 
 void pauseFunction(string str){
 	
-cout<<"Please press enter to "<<str<<" "<<endl;
-cin.get();	// using instead of system("PAUSE"); for cross platform functionality
-	// cin.get works same like system("PAUSE");
-
+		cout<<"Press enter to "<<str<<endl;
+		//cin.ignore(); // Ignores the new line or the input
+		cin.ignore(); // using instead of system("PAUSE"); for cross platform functionality
+		// cin.get works same like system("PAUSE");
+	
 } // pauseFunction() ends here.
+
+
+
 
 #endif // UTILS_HPP

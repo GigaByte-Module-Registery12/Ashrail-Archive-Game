@@ -106,6 +106,55 @@ void smallScrRecommendFunction(){
 	clearConsoleFunction(); // clear the console screen
 } // smallScrRecommendFunction() function ends here.
 
+
+void playerNotPlaysGame(){
+	
+	// player not want to play
+		// calling playOrNot char type variable from playOrNotNamespace which is in input.hpp
+		
+		// system("cls");
+		clearConsoleFunction(); // clear the console screen
+		endLineFunction(2);		// function for breaking the lines in utils.hpp
+		tabSpaceFunction(5);	// function for space of tab in utils.hpp
+		//	spaceFunction(7); 	// function foronly space  in utils.hpp
+		// Below text want to center it in console Terminal
+		cout<<"PLEASE GO TO HELL AND CLOSE THIS PROGRAM"<<endl;
+		endLineFunction(1);		// function for breaking the lines in utils.hpp
+		
+		string gunExit = R"(
+                                                      ^
+                                                     | |
+                                                   @#####@
+                                                 (###   ###)-.
+                                               .(###     ###) \
+                                              /  (###   ###)   )
+                                             (=-  .@#####@|_--"
+                                             /\    \_|l|_/ (\
+                                            (=-\     |l|    /
+                                             \  \.___|l|___/
+                                             /\      |_|   /
+                                            (=-\._________/\
+                                             \             /
+                                               \._________/
+                                                 #  ----  #
+                                                 #   __   #
+                                                 \########/
+
+		
+		
+		)";
+		cout<<gunExit<<endl;
+		endLineFunction(1);
+		tabSpaceFunction(5);	// function for space of tab in utils.hpp
+		// Below text want to center it in console Terminal
+		// pauseFunction("close the program");
+		cin.get();
+		clearConsoleFunction();
+		exit(0); // exit from the program, using this from cstdlib header file
+	
+	}
+
+
 void gameTitleAsciiFunction(){
 	
 /*
@@ -196,9 +245,10 @@ cout<<ashrailValley<<endl;
 
 endLineFunction(4);
 tabSpaceFunction(5);
-cout<<"Please press enter to continue.";
-cin.ignore();
-cin.get();
+// cout<<"Please press enter to continue.";
+// cin.ignore();
+// cin.get();
+pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 clearConsoleFunction();
 
 } // startSceneTitle() function ends here
@@ -300,9 +350,7 @@ cout<<roadSideCamp<<endl;
 endLineFunction(4);
 tabSpaceFunction(5);
 spaceFunction(4);
-cout<<"Please press enter to continue.";
-cin.ignore();
-cin.get();
+pauseFunction("continue"); // responsible for pausing and showing key to user to continue
 clearConsoleFunction();
 } // scene4Ttile() function ends here
 
@@ -503,5 +551,7 @@ cin.ignore();
 cin.get();
 clearConsoleFunction();
 } // scene11Ttile() function ends here
+
+
 
 #endif // UI_HPP
