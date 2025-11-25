@@ -236,44 +236,37 @@ int scene3Function(){
 	
 	endLineFunction(2);
 	tabSpaceFunction(5);
-	spaceFunction(7);
+	spaceFunction(6);
 	cout<<"Scene 3 - High Road Wind";
 	endLineFunction(2);
 	
 // Implemeting scene 3 story
 
 tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"You climb the ruined overpass, boots clinking on rebar and fallen concrete. \n"<<endl;
+cout<<"You climb the ruined overpass, boots clinking on rebar and fallen concrete. The wind \n"<<endl;
 
 tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"The wind catches the loose fabric of your jacket and the world opens - far-off \n"
-	<<"\t \t \tsilhouettes of ruined machinery like  sleeping leviathans. \n"<<endl;
+cout<<"catches the loose fabric of your jacket and the world opens - far-off silhouettes \n"
+	<<"\t \tof ruined machinery like  sleeping leviathans. \n"<<endl;
 	
 tabSpaceFunction(2);
-spaceFunction(6);
-cout<<"Near the highest point, you see fresh footprints and, beneath them, a small\n "
-	<<"\t \t \ttransistor radio tied to a broken guardrail. Someone was here recently. \n"<<endl;
+cout<<"Near the highest point, you see fresh footprints and, beneath them, a small transistor\n "
+	<<"\t \tradio tied to a broken guardrail. Someone was here recently. \n"<<endl;
 
 endLineFunction(2);
-tabSpaceFunction(2);
+tabSpaceFunction(1);
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
 tabSpaceFunction(2);
-spaceFunction(6);
 cout<<" Choices: \n"<<endl;
 
 tabSpaceFunction(2);
-spaceFunction(6);
-cout<<" 1: Examine the footprints closely and follow their direction. "<<endl;
+cout<<"  1: Examine the footprints closely and follow their direction. "<<endl;
 
 tabSpaceFunction(2);
-spaceFunction(6);
-cout<<" 2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
+cout<<"  2: Take the radio and head downhill quickly, avoiding following anyone. \n"<<endl;
 
 tabSpaceFunction(2);
-spaceFunction(6);
 cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
 
@@ -330,18 +323,28 @@ int scene4Function(){
 	
 // Implemeting scene 4 story
 
-cout << "\t By midday you reach a crossroads of scorched billboards. "
-<< "A small camp of tarps and salvaged metal\n  stands by the road. "
-<< "Laughter — thin but genuine — drifts out. "
-<< "Among the campers are three notable figures\n  who chat and trade: a tall man "
-<< "with spectacles and an old laptop, a cheerful figure who offers tea, and\n  a man "
-<< "who talks loudly about his confidence while fussing with a scarf. "
-<< "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
+cout<< "\t By midday you reach a crossroads of scorched billboards. "
+	<< "A small camp of tarps and salvaged metal\n  stands by the road. "
+	<< "Laughter — thin but genuine — drifts out. "
+	<< "Among the campers are three notable figures\n  who chat and trade: a tall man "
+	<< "with spectacles and an old laptop, a cheerful figure who offers tea, and\n  a man "
+	<< "who talks loudly about his confidence while fussing with a scarf. "
+	<< "They watch you with curiosity;\n  the laptop man looks particularly interesting to you. \n"<<endl;
 
+endLineFunction(2);
+tabSpaceFunction(2);
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-cout<<"  Choices: "<<endl;
+tabSpaceFunction(2);
+spaceFunction(6);
+cout<<"  Choices: \n"<<endl;
+
+tabSpaceFunction(2);
+spaceFunction(6);
 cout<<"  1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
+
+tabSpaceFunction(2);
+spaceFunction(6);
 cout<<"  2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
 cout<<"  Select your choice (1 or 2): ";
 cin>>choice;
