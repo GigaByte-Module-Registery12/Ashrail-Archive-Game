@@ -482,28 +482,32 @@ int scene6Function(){
 	playerStatsFunction();
 	choice = 0; // setting the choice to default value
 	
+	endLineFunction(1);
 	tabSpaceFunction(5);
 	spaceFunction(4);
 	cout<<"Scene 6 - Approaching The Archive";
-	endLineFunction(2);
+	endLineFunction(3);
 	
 // Implemeting scene 6 story
-cout << "\t The terrain eases and you see the hulking mass of The Archive ahead: a dome of "
-	 << "corrugated\n   metal and glass, half-buried in silt. "
-     << "Its entrance is a rusted door marked with faded labels in\n   several languages. An " 
-     << "old terminal sits to one side, its screen cracked but dark. "
-     << "Around the door,\n   six plaques hold fragments of text — torn, half-melted lines that " 
-     << "look like parts of poems, error\n   logs, and radio transcripts. "
-     << "You remember Bangali Baba’s riddle about “lines of speech” and the\n   hint Sir Compiler "
-     << "gave about a three-word key. "
-     << "The terminal awaits input: three words, separated\n   by spaces. \n" << endl;
+
+cout<<"\t The terrain eases and you see the hulking mass of The Archive ahead: a dome of corrugated "
+	<<"metal and glass,\n \t half-buried in silt. \n"<<endl;
+	
+cout<<"\t Its entrance is a rusted door marked with faded labels several languages. An old terminal "
+	<<"sits to one side,\n \t its screen cracked but dark. \n"<<endl;
+	
+cout<<"\t Around the door, six plaques hold fragments of text — torn, half-melted lines that look "
+	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
+
+cout<<"\t You remember Bangali Baba’s riddle about “lines of speech” and the hint Sir Compiler "
+	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces. \n"<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-cout<<"  Choices: "<<endl;
-cout<<"  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
-cout<<"  2: Use brute force - try common archive keys you heard on the radio and the scraps \n"<<endl;
-cout<<"  Select your choice (1 or 2): ";
+cout<<"\t  Choices: \n"<<endl;
+cout<<"\t  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
+cout<<"\t  2: Use brute force - try common archive keys you heard on the radio and the scraps \n"<<endl;
+cout<<"\t   Select your choice (1 or 2): ";
 cin>>choice;
 
 
