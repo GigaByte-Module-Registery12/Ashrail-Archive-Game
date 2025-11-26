@@ -30,7 +30,7 @@ string playerName = "Arin";
 // character encounter flag(probably going to use this)
 bool metSirComplier, metBangaliBaba, metSigmaTemp100;
 bool gameRunning = true;
-
+char playGameAgain = ' ';
 
 
 

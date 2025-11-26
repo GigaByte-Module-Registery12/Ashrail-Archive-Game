@@ -13,7 +13,8 @@ int main(){
 
 // Implement everything in main while loop
 
-	// Small Screen Recomendation function
+
+// Small Screen Recomendation function
 	smallScrRecommendFunction();
 	
 	// Game Title Ascii screen
@@ -25,8 +26,14 @@ int main(){
 	
 	// game playing or not if else and other functions
 	gamePlayingOrNotFunction();
+
+	
+}
+
+	
 	
 	
 	return 0;
 	
 }
+
