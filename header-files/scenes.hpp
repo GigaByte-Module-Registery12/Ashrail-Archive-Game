@@ -14,6 +14,22 @@ the content would only be processed once, thus avoiding the redefinition error.
 
 #include<iostream>
 #include<string>
+#include<cstdlib> // using for exit(); function
+#include<limits>                         // for numeric_limits used by cin.ignore()
+/*
+#include <limits>: This header provides features to define the characteristics of numeric types. 
+It allows access to information like the maximum and minimum values a type can hold.
+*/
+
+#include<cctype>                         // for tolower() and isdigit()
+/*
+#include <cctype>: This header contains functions for character handling, including tolower(), 
+which converts a character to its lowercase equivalent.
+
+Using tolower() media the code is foolproof against different case inputs (both upper and lower). 
+It enhances user experience by preventing errors due to simple case mismatches.
+*/
+
 using namespace std;
 // our header files:
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
@@ -87,45 +103,55 @@ cout<<"\t Today you decide to set out toward The Archive, but the road forks whe
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
 
-cout<<"\t Choices: \n"<<endl;
-cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
-	<<"you can see ahead. \n"<<endl;
-cout<<"\t  Select your choice (1 or 2): ";
-cin>>choice;
 
 
-	switch(choice){
-		case 1:
-			// call respective function of scene
+bool validChoice = false; // Flag to track valid input
+
+    while (!validChoice) { // Loop until valid input is received
+        cout<<"\t Choices: \n"<<endl;
+		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+			<<"you can see ahead. \n"<<endl;
+        cout << "\t Select your choice (1 or 2): ";
+        cin >> choice; // Get user input
+
+        // Check if the input is valid integer
+        if (cin.fail()) {
 			clearConsoleFunction();
-			supplies -= 1;
-			playerMorale += 2;
-			scene2Function();
-		break;
-	
-		case 2:
-			// call respective function of scene
-			clearConsoleFunction();
-			playerHealth -= 15;
-			playerMorale -= 10;
-			scene3Function();
-		break;
-		
-		default:
-			endLineFunction(3);
-			tabSpaceFunction(5);
-			spaceFunction(4);
-			cout<<"You have to enter 1 or 2 \n"<<endl;
-			tabSpaceFunction(5);
-			spaceFunction(4);
-			pauseFunction("continue"); // responsible for pausing and showing key to user to continue
-			clearConsoleFunction();
-			// Implement a loop so it should ask again for user to enter correct input
-			
-		break;
-	}
-	
+            cout << "\n \t Invalid input! You can only enter a number.\n"<<endl;
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Ask for input again
+        }
+
+        // Now check the actual value of choice
+        switch (choice) {
+            case 1:
+                // Call function for scene 1
+                clearConsoleFunction();
+                supplies -= 1;
+                playerMorale += 2;
+                scene2Function();
+                validChoice = true; // Exit loop
+                break;
+
+            case 2:
+                // Call function for scene 2
+                clearConsoleFunction();
+                playerHealth -= 15;
+                playerMorale -= 10;
+                scene3Function();
+                validChoice = true; // Exit loop
+                break;
+
+            default:
+                // Error message for any number that's not 1 or 2
+                cout << "You have to enter 1 or 2 \n" << endl;
+                pauseFunction("continue"); // Wait for user to acknowledge the message
+                clearConsoleFunction();
+                break; // Re-prompt user for input
+        }
+    } // while loop ends here	
 	
 	
 
