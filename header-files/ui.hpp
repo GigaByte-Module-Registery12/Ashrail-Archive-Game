@@ -147,8 +147,9 @@ void playerNotPlaysGame(){
 		endLineFunction(1);
 		tabSpaceFunction(5);	// function for space of tab in utils.hpp
 		// Below text want to center it in console Terminal
-		// pauseFunction("close the program");
-		cin.get();
+		pauseFunction("close the program");
+		
+	//	cin.get();
 		clearConsoleFunction();
 		exit(0); // exit from the program, using this from cstdlib header file
 	
@@ -246,7 +247,6 @@ cout<<ashrailValley<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 
 } // startSceneTitle() function ends here
