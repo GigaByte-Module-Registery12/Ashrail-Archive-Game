@@ -158,6 +158,7 @@ void gamePlayingOrNotFunction(){
 		clearConsoleFunction();
 	
 		while(playOrNotNamespace::playOrNot != 'y' && playOrNotNamespace::playOrNot != 'n'){
+			gameTitleAsciiFunction();
 			playOrNotInputFunction(); // Re-prompt input
 			clearConsoleFunction();
 		if (playOrNotNamespace::playOrNot == 'y' || playOrNotNamespace::playOrNot == 'Y'){

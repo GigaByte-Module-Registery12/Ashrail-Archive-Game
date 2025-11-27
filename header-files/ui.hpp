@@ -110,46 +110,7 @@ void smallScrRecommendFunction(){
 void playerNotPlaysGame(){
 	
 	// player not want to play
-		// calling playOrNot char type variable from playOrNotNamespace which is in input.hpp
 		
-		// system("cls");
-		clearConsoleFunction(); // clear the console screen
-		endLineFunction(2);		// function for breaking the lines in utils.hpp
-		tabSpaceFunction(5);	// function for space of tab in utils.hpp
-		//	spaceFunction(7); 	// function foronly space  in utils.hpp
-		// Below text want to center it in console Terminal
-		cout<<"PLEASE GO TO HELL AND CLOSE THIS PROGRAM"<<endl;
-		endLineFunction(1);		// function for breaking the lines in utils.hpp
-		
-		string gunExit = R"(
-                                                      ^
-                                                     | |
-                                                   @#####@
-                                                 (###   ###)-.
-                                               .(###     ###) \
-                                              /  (###   ###)   )
-                                             (=-  .@#####@|_--"
-                                             /\    \_|l|_/ (\
-                                            (=-\     |l|    /
-                                             \  \.___|l|___/
-                                             /\      |_|   /
-                                            (=-\._________/\
-                                             \             /
-                                               \._________/
-                                                 #  ----  #
-                                                 #   __   #
-                                                 \########/
-
-		
-		
-		)";
-		cout<<gunExit<<endl;
-		endLineFunction(1);
-		tabSpaceFunction(5);	// function for space of tab in utils.hpp
-		// Below text want to center it in console Terminal
-		pauseFunction("close the program");
-		
-	//	cin.get();
 		clearConsoleFunction();
 		exit(0); // exit from the program, using this from cstdlib header file
 	
