@@ -17,6 +17,8 @@ the content would only be processed once, thus avoiding the redefinition error.
 
 
 #include<iostream>
+#include<string>
+#include<limits>     // for numeric_limits used by cin.ignore(..);
 using namespace std;
 
 void spaceFunction(int s){
@@ -43,7 +45,11 @@ void pauseFunction(string str){
 	
 		cout<<"Press enter to "<<str<<endl;
 		//cin.ignore(); // Ignores the new line or the input
-		cin.ignore(); // using instead of system("PAUSE"); for cross platform functionality
+		// cin.ignore(); // using instead of system("PAUSE"); for cross platform functionality
+	
+		
+		cin.get(); // wait for single Enter
+		
 		// cin.get works same like system("PAUSE");
 	
 } // pauseFunction() ends here.

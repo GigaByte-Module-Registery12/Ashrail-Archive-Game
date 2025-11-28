@@ -287,7 +287,7 @@ void scene4Title(){
 clearConsoleFunction();
 
 string scene4 = R"(
-
+sfs
 )";
 
 cout<<scene4<<endl;
@@ -295,16 +295,16 @@ cout<<scene4<<endl;
 endLineFunction(2);
 
 string RoadSideCamp = R"(
-
-
+asda
 
 )";
 	
+	cout<<RoadSideCamp<<endl;
 	
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
+// cin.get();
 clearConsoleFunction();
 } // scene4Ttile() function ends here
 
@@ -331,7 +331,6 @@ cout<<sirCompilerTalk<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene5Ttile() function ends here
 
@@ -357,7 +356,6 @@ cout<<theArchive<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene6Ttile() function ends here
 
@@ -383,7 +381,6 @@ cout<<insideArhive<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene7Ttile() function ends here
 
@@ -410,7 +407,6 @@ cout<<alarmedRetreat<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene8Ttile() function ends here
 
@@ -436,7 +432,6 @@ cout<<truthAndBurden<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene9Ttile() function ends here
 
@@ -462,7 +457,6 @@ cout<<caravanChance<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene10Ttile() function ends here
 
@@ -488,7 +482,6 @@ cout<<memoryHands<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-cin.get();
 clearConsoleFunction();
 } // scene11Ttile() function ends here
 

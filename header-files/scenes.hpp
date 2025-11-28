@@ -15,7 +15,7 @@ the content would only be processed once, thus avoiding the redefinition error.
 #include<iostream>
 #include<string>
 #include<cstdlib> // using for exit(); function
-#include<limits>                         // for numeric_limits used by cin.ignore()
+#include<limits> // for numeric_limits used by cin.ignore()
 /*
 #include <limits>: This header provides features to define the characteristics of numeric types. 
 It allows access to information like the maximum and minimum values a type can hold.
@@ -51,6 +51,7 @@ int scene6Function();
 // int scene9Function();
 // int scene10Function();
 // int scene11Function();
+void sceneTwoOptionalChoiceFunction();
 
 // function declaration of scene titles
 void startSceneTitle();
@@ -250,36 +251,15 @@ bool validChoice = false; // Flag to track valid input
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             continue; // Ask for input again
         }
+        
+        // Remove leftover newline so later pauses/getline behave predictably
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         // Now check the actual value of choice
         switch (choice) {
             case 1:
-                // Call function for scene 2
-                // call respective function of scene
-			clearConsoleFunction();
-			
-			// Choice 1 of meeting with Bangali Baba
-		
-			
-			endLineFunction(4);
-			tabSpaceFunction(6);
-			cout<<"You Choose to speak to him \n"<<endl;
-			
-			endLineFunction(2);
-cout<<"\t \t He offers a warm can of stew and a short story about the old libraries. "
-	<<"He asks nothing\n \n \t \t in return. He gives you a scrap of cloth that can be used "
-	<<"as bandage, and tells you\n \n \t \t a riddle hinting that The Archive keeps its main "
-	<<"gate code hidden in 'lines of speech'. \n"<<endl;
-			playerHealth += 5;
-			playerMorale += 3;
-			metBangaliBaba = true; // if true means higher success rate of succeding the game
-			
-			endLineFunction(4);
-			tabSpaceFunction(6);
-			pauseFunction("continue"); // coming from utils.hpp
-			cin.get();
-			clearConsoleFunction();
-			
+                
+			sceneTwoOptionalChoiceFunction();
 			
 			scene4Function();
                 
@@ -319,6 +299,36 @@ cout<<"\t \t He offers a warm can of stew and a short story about the old librar
 	return sceneID;
 	
 } // scene2Function() function ends here
+
+void sceneTwoOptionalChoiceFunction(){
+	
+	// Call function for scene 2
+   // call respective function of scene
+			clearConsoleFunction();
+			
+			// scene 2 Choice 1 of meeting with Bangali Baba
+		
+			
+			endLineFunction(4);
+			tabSpaceFunction(6);
+			cout<<"You Choose to speak to him \n"<<endl;
+			
+			endLineFunction(2);
+cout<<"\t \t He offers a warm can of stew and a short story about the old libraries. "
+	<<"He asks nothing\n \n \t \t in return. He gives you a scrap of cloth that can be used "
+	<<"as bandage, and tells you\n \n \t \t a riddle hinting that The Archive keeps its main "
+	<<"gate code hidden in 'lines of speech'. \n"<<endl;
+			playerHealth += 5;
+			playerMorale += 3;
+			metBangaliBaba = true; // if true means higher success rate of succeding the game
+			
+			endLineFunction(4);
+			tabSpaceFunction(6);
+		    pauseFunction("continue");
+			clearConsoleFunction();
+			
+	
+	} // sceneTwoOptionalChoiceFunction() function ends here
 
 int scene3Function(){
 	
@@ -379,6 +389,9 @@ cout<<"  Select your choice (1 or 2): ";
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             continue; // Ask for input again
         }
+
+// Remove leftover newline so later pauses/getline behave predictably
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         // Now check the actual value of choice
         switch (choice) {
@@ -513,6 +526,10 @@ cin>>choice;
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             continue; // Ask for input again
         }
+        
+        // Remove leftover newline so later pauses/getline behave predictably
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // explain above line in detail
 
         // Now check the actual value of choice
         switch (choice) {
@@ -541,7 +558,7 @@ cin>>choice;
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
+				// cin.ignore(); // remove this line because we already did this below
 				
 				/*
  
@@ -644,6 +661,10 @@ cout<<"\t   Select your choice (1 or 2): ";
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             continue; // Ask for input again
         }
+
+// Remove leftover newline so later pauses/getline behave predictably
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // explain above line in detail
 
         // Now check the actual value of choice
         switch (choice) {
@@ -784,6 +805,10 @@ cout<<"\t   Select your choice (1 or 2): ";
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             continue; // Ask for input again
         }
+
+// Remove leftover newline so later pauses/getline behave predictably
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // explain above line in detail
 
         // Now check the actual value of choice
         switch (choice) {
