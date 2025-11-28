@@ -515,7 +515,6 @@ bool validChoice = false; // Flag to track valid input
 cout<<"\t 1: Appraoch the man with the laptop and ask about The Archive. "<<endl;
 cout<<"\t 2: Ignore the camp and continue toward The Archive immediately. \n"<<endl;
 cout<<"\t  Select your choice (1 or 2): ";
-cin>>choice;
         cin >> choice; // Get user input
 
         // Check if the input is valid integer
@@ -527,9 +526,23 @@ cin>>choice;
             continue; // Ask for input again
         }
         
+/*
+        if (cin.fail()) { ... }
+    If reading failed (e.g., user typed letters), clear error flags, discard the bad input line, and re-prompt.
+*/
+
+
         // Remove leftover newline so later pauses/getline behave predictably
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        // explain above line in detail
+/*
+
+    This is the key fix. It discards everything left in the input buffer up to and including the next newline. 
+    If the user previously entered input with operator>> (like cin >> choice), that leaves a newline in the buffer. This line clears that leftover so the next input/wait is clean.
+    numeric_limits::max() means "ignore as many characters as needed".
+    
+    After a successful numeric read, this removes the leftover newline (or any stray extra characters on the same line). This prevents the leftover newline from being seen as input by the next pause/getline.
+
+*/
 
         // Now check the actual value of choice
         switch (choice) {
