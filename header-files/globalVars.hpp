@@ -26,6 +26,9 @@ int playerMorale = 50;
 int supplies = 3;
 int choice = 0;
 int sceneID = 0;
+int score = 0;
+int guessPinDigits[3] = {0,0,0}; // using array for taking input of digits of PIN
+int pinRandomValue[3] = {0,0,0}; // using array for 3 different PIN values
 string playerName = "Arin";
 // character encounter flag(probably going to use this)
 bool metSirComplier, metBangaliBaba, metSigmaTemp100;

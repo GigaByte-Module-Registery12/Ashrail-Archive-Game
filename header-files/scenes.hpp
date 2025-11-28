@@ -40,6 +40,12 @@ using namespace std;
 void playerStatsFunction();
 void clearConsoleFunction();
 
+void spaceFunction(int s);
+void endLineFunction(int e);
+void tabSpaceFunction(int t);
+void pauseFunction(string str);
+void sceneChoiceRevealFunction();
+
 // function declaration of scenes
 int scene2Function();
 int scene3Function();
@@ -804,6 +810,7 @@ sceneChoiceRevealFunction(); // coming from utils.hpp
 	bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
+		cout<<"\t * Remeber for your both choice first you will Guess a 3-Digit PIN then the actual key! *\n"<<endl;
        cout<<"\t  Choices: \n"<<endl;
 cout<<"\t  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
 cout<<"\t  2: Use brute force - try common archive keys you heard on the radio and the scraps \n"<<endl;
@@ -826,15 +833,25 @@ cout<<"\t   Select your choice (1 or 2): ";
         // Now check the actual value of choice
         switch (choice) {
             case 1:
-                // Call function for scene 1
-                clearConsoleFunction();
+                
+                if (metSirComplier == true){
+					score += 3;
+					} else if (metBangaliBaba == true){
+					score += 2;
+					} else if (metSigmaTemp100 == true){
+					score -= 1;
+					}
+					
+					int scoreCheck;
+                
+				clearConsoleFunction();
                  
                 
                 validChoice = true; // Exit loop
                 break;
 
             case 2:
-                // Call function for scene 2
+                
                 clearConsoleFunction();
                
                 

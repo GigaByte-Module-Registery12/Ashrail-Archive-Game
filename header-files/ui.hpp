@@ -19,6 +19,13 @@ the content would only be processed once, thus avoiding the redefinition error.
 #include "scenes.hpp" // Contains game scenes
 using namespace std;
 
+// Function declarations
+void spaceFunction(int s);
+void endLineFunction(int e);
+void tabSpaceFunction(int t);
+void pauseFunction(string str);
+void sceneChoiceRevealFunction();
+
 /*
 #include <cstdlib>: 
 

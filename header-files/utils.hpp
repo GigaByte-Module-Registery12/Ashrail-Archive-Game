@@ -19,7 +19,12 @@ the content would only be processed once, thus avoiding the redefinition error.
 #include<iostream>
 #include<string>
 #include<limits>     // for numeric_limits used by cin.ignore(..);
+#include<cstdlib>
+#include<ctime>
+#include "globalVars.hpp"
+#include "ui.hpp"
 using namespace std;
+
 
 void spaceFunction(int s){
 	for(int i = 1; i <= s; i++){
@@ -61,6 +66,9 @@ void sceneChoiceRevealFunction(){
 	pauseFunction("reveal the choices! ");
 	
 } // sceneChoiceRevealFunction() ends here
+
+// PIN GUESSING
+
 
 
 #endif // UTILS_HPP
