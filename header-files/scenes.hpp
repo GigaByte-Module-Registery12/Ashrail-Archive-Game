@@ -1556,7 +1556,7 @@ pauseFunction("continue");
 
 clearConsoleFunction();
 
-// now game end message and display credits
+// now game end message and display credits 
 
 	sceneID = 11;
 	return sceneID;

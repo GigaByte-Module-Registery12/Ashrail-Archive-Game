@@ -185,14 +185,12 @@ void startSceneTitle(){
 
 clearConsoleFunction();
 string scene1 = R"(
-
-
-                                         / _\ ___ ___ _ __   ___  / |
-                                         \ \ / __/ _ \ '_ \ / _ \ | |
-                                         _\ \ (_|  __/ | | |  __/ | |
-                                         \__/\___\___|_| |_|\___| |_|
-
-
+                                              __                       _ 
+                                             / _\ ___ ___ _ __   ___  / |
+                                             \ \ / __/ _ \ '_ \ / _ \ | |
+                                             _\ \ (_|  __/ | | |  __/ | |
+                                             \__/\___\___|_| |_|\___| |_|
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 )";
 
 cout<<scene1<<endl;
@@ -271,7 +269,11 @@ void scene3Title(){
 clearConsoleFunction();
 
 string scene3 = R"(
-
+                                              __                       _____ 
+                                             / _\ ___ ___ _ __   ___  |___ /
+                                             \ \ / __/ _ \ '_ \ / _ \   |_ \
+                                             _\ \ (_|  __/ | | |  __/  ___) |
+                                             \__/\___\___|_| |_|\___| |____/
 )";
 
 cout<<scene3<<endl;
@@ -296,7 +298,12 @@ void scene4Title(){
 clearConsoleFunction();
 
 string scene4 = R"(
-sfs
+                                              __                       _  _   
+                                             / _\ ___ ___ _ __   ___  | || |  
+                                             \ \ / __/ _ \ '_ \ / _ \ | || |_ 
+                                             _\ \ (_|  __/ | | |  __/ |__   _|
+                                             \__/\___\___|_| |_|\___|    |_|  
+                                                                              
 )";
 
 cout<<scene4<<endl;
@@ -322,7 +329,11 @@ void scene5Title(){
 clearConsoleFunction();
 
 string scene5 = R"(
-
+                                              __                       ____  
+                                             / _\ ___ ___ _ __   ___  | ___|
+                                             \ \ / __/ _ \ '_ \ / _ \ |___ \
+                                             _\ \ (_|  __/ | | |  __/  ___) |
+                                             \__/\___\___|_| |_|\___| |____/
 )";
 
 cout<<scene5<<endl;
@@ -347,7 +358,11 @@ void scene6Title(){
 clearConsoleFunction();
 
 string scene6 = R"(
-
+                                              __                        __   
+                                             / _\ ___ ___ _ __   ___   / /_
+                                             \ \ / __/ _ \ '_ \ / _ \ | '_ \
+                                             _\ \ (_|  __/ | | |  __/ | (_) |
+                                             \__/\___\___|_| |_|\___|  \___/
 )";
 
 cout<<scene6<<endl;
@@ -355,8 +370,6 @@ cout<<scene6<<endl;
 endLineFunction(2);
 
 string theArchive = R"(
-
-
 
 )";
 
@@ -372,7 +385,12 @@ void scene7Title(){
 clearConsoleFunction();
 
 string scene7 = R"(
-
+                                              __                       _____ 
+                                             / _\ ___ ___ _ __   ___  |___  |
+                                             \ \ / __/ _ \ '_ \ / _ \    / / 
+                                             _\ \ (_|  __/ | | |  __/   / /  
+                                             \__/\___\___|_| |_|\___|  /_/   
+                                                                             
 )";
 
 cout<<scene7<<endl;
@@ -398,7 +416,11 @@ void scene8Title(){
 clearConsoleFunction();
 
 string scene8 = R"(
-
+                                              __                        ___
+                                             / _\ ___ ___ _ __   ___   ( _ )
+                                             \ \ / __/ _ \ '_ \ / _ \  / _ \
+                                             _\ \ (_|  __/ | | |  __/ | (_) |
+                                             \__/\___\___|_| |_|\___|  \___/
 )";
 
 cout<<scene8<<endl;
@@ -423,7 +445,11 @@ void scene9Title(){
 clearConsoleFunction();
 
 string scene9 = R"(
-
+                                              __                        ___
+                                             / _\ ___ ___ _ __   ___   / _ \
+                                             \ \ / __/ _ \ '_ \ / _ \ | (_) |
+                                             _\ \ (_|  __/ | | |  __/  \__, |
+                                             \__/\___\___|_| |_|\___|    /_/
 )";
 
 cout<<scene9<<endl;
@@ -448,7 +474,11 @@ void scene10Title(){
 clearConsoleFunction();
 
 string scene10 = R"(
-
+                                             __                       _  ___
+                                            / _\ ___ ___ _ __   ___  / |/ _ \
+                                            \ \ / __/ _ \ '_ \ / _ \ | | | | |
+                                            _\ \ (_|  __/ | | |  __/ | | |_| |
+                                            \__/\___\___|_| |_|\___| |_|\___/
 )";
 
 cout<<scene10<<endl;
@@ -473,7 +503,11 @@ void scene11Title(){
 clearConsoleFunction();
 
 string scene11 = R"(
-
+                                             __                       _ _
+                                            / _\ ___ ___ _ __   ___  / / |
+                                            \ \ / __/ _ \ '_ \ / _ \ | | |
+                                            _\ \ (_|  __/ | | |  __/ | | |
+                                            \__/\___\___|_| |_|\___| |_|_|
 )";
 
 cout<<scene11<<endl;
