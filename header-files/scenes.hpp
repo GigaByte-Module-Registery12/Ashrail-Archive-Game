@@ -31,6 +31,12 @@ Using tolower() media the code is foolproof against different case inputs (both 
 It enhances user experience by preventing errors due to simple case mismatches.
 */
 
+// using namespace std;
+// our header files:
+#include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
+#include "ui.hpp" // contains ui related function and clearing screen
+#include "globalVars.hpp" // contains global variable
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -40,12 +46,6 @@ using std::numeric_limits;
 using std::streamsize;
 using std::srand;
 using std::time;
-
-using namespace std;
-// our header files:
-#include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
-#include "ui.hpp" // contains ui related function and clearing screen
-#include "globalVars.hpp" // contains global variable
 
 // function declaration
 void playerStatsFunction();
@@ -58,6 +58,7 @@ void pauseFunction(string str);
 void sceneChoiceRevealFunction();
 void pinGuessingFunction();
 int randomNumGeneratorFunction(int n);
+void gameEndTitle();
 
 // function declaration of scenes
 int scene2Function();
@@ -71,7 +72,7 @@ int scene9Function();
 int scene10Function();
 int scene11Function();
 void sceneTwoOptionalChoiceFunction();
-
+void endingFunction();
 // function declaration of scene titles
 void startSceneTitle();
 void scene2Title();
@@ -805,7 +806,7 @@ cout<<"\t Its entrance is a rusted door marked with faded labels several languag
 cout<<"\t Around the door, six plaques hold fragments of text torn, half-melted lines that look "
 	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
 
-cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Â and the hint Sir Compiler "
+cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Ã‚Â and the hint Sir Compiler "
 	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces."<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
@@ -1557,10 +1558,26 @@ pauseFunction("continue");
 clearConsoleFunction();
 
 // now game end message and display credits 
+endingFunction();
 
 	sceneID = 11;
 	return sceneID;
 } // scene11Function() functions ends here
+
+void endingFunction(){
+	
+	gameEndTitle();
+	
+	endLineFunction(3);
+	
+	cout<<"Credits: \n"<<endl;
+	cout<<"THe game is made possible by these three: "<<endl;
+	cout<<"Dodwani Khusbhu"<<endl;
+	cout<<"Jawad Ali"<<endl;
+	cout<<"Gilgamesh BABA"<<endl;
+	pauseFunction("exit");
+	exit(0);
+}
 
 void allScenes(){
 

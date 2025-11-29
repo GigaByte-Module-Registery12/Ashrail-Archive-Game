@@ -222,4 +222,6 @@ error: expected primary-expression before ‘max’
 } // gamePlayingOrNotFunction function ends here.
 
 
+
+
 #endif // INPUT_HPP

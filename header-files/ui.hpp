@@ -311,7 +311,6 @@ cout<<scene4<<endl;
 endLineFunction(2);
 
 string RoadSideCamp = R"(
-asda
 
 )";
 	
@@ -464,7 +463,12 @@ cout<<truthAndBurden<<endl;
 	
 endLineFunction(2);
 tabSpaceFunction(6);
-pauseFunction("continue"); // coming from utils.hpp
+// pauseFunction("continue"); // coming from utils.hpp
+
+cout << "Press enter to continue" << endl;
+cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clears the buffer
+cin.get(); // Wait for user to press Enter
+
 clearConsoleFunction();
 } // scene9Ttile() function ends here
 
@@ -522,11 +526,24 @@ cout<<memoryHands<<endl;
 	
 endLineFunction(2);
 tabSpaceFunction(6);
-pauseFunction("continue"); // coming from utils.hpp
+// pauseFunction("continue"); // coming from utils.hpp
+
+cout << "Press enter to continue" << endl;
+cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clears the buffer
+cin.get(); // Wait for user to press Enter
+
 clearConsoleFunction();
 } // scene11Ttile() function ends here
 
+void gameEndTitle(){
+	
+	string gameEndTitleAscii = R"(
+	The Ending
+	)";
+	
+	cout<<gameEndTitleAscii<<endl;
 
+}
 
 
 #endif // UI_HPP
