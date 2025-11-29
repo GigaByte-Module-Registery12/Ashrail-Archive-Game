@@ -923,7 +923,7 @@ cout<<"\t   Select your choice (1 or 2): ";
 				
 				endLineFunction(1);
 				tabSpaceFunction(1);
-				endLineFunction(1);
+				spaceFunction(1);
 				pauseFunction("continue");
 				
 				scene8Function();
@@ -1135,21 +1135,16 @@ int scene8Function() {
 	endLineFunction(2);
 
 // Implemented Scene 8 Story
-cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
-	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+cout<<"\t The door snaps shut behind a ringing alarm. Dust churns, and vent hiss. "
+	<<"You grab what you can and escape\n \t through a maintenance ddor that dumps "
+	<<"you into a service alley. \n"<<endl;
 	
-cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
-	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
-	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
-	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+cout<<"\t The Archive remains closed, its secrets sealed for now. You are "
+	<<"bruised but alive. Outside the land is\n \t quiter; distant lights blinks "
+	<<"like watchful eyes. \n"<<endl;
 	
-cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
-	<<"data repository known as\n \t The Archive, a place of records and machines that might "
-	<<"still answer questions about the Event. \n"<<endl;
-	
-cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
-	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+cout<<"\t The setback stings, but you know The Archive is still a possibility "
+	<<"if you gather more clues. \n"<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
@@ -1159,9 +1154,8 @@ bool validChoice = false; // Flag to track valid input
     while (!validChoice) { // Loop until valid input is received
         // Scene 8 Choices
         cout<<"\t Choices: \n"<<endl;
-		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
-			<<"you can see ahead. \n"<<endl;
+		cout<<"\t 1: Return to camp to ask Sir Complier for deeper help. "<<endl;
+		cout<<"\t 2: Travel farther down the valley to salvage supplies and allies. \n"<<endl;
         cout << "\t Select your choice (1 or 2): ";
         cin >> choice; // Get user input
 
@@ -1191,7 +1185,7 @@ bool validChoice = false; // Flag to track valid input
                 clearConsoleFunction();
                 supplies += 2;
                 playerMorale -= 1;
-                // scene10Function();
+                scene10Function();
                 
                 validChoice = true; // Exit loop
                 break;
