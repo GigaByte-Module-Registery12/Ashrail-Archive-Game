@@ -123,8 +123,6 @@ cout<<"\t Today you decide to set out toward The Archive, but the road forks whe
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
 
-
-
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
@@ -699,7 +697,6 @@ cout<<"\t   Select your choice (1 or 2): ";
         // Now check the actual value of choice
         switch (choice) {
             case 1:
-                // Call function for scene 1
                 clearConsoleFunction();
                  supplies += 1;
  				playerMorale += 2;
@@ -709,7 +706,6 @@ cout<<"\t   Select your choice (1 or 2): ";
                 break;
 
             case 2:
-                // Call function for scene 2
                 clearConsoleFunction();
                playerMorale += 4;
 			  scene6Function();
@@ -846,13 +842,12 @@ cout<<"\t   Select your choice (1 or 2): ";
         switch (choice) {
             case 1:
             // declaring variables above to avoid errors, if not declared here error will be given
-                     int randomNumber1;
-					int scoreCheck;
+                    int randomNumberChoice1;
+					
      
                 // pinGuessingFunction();
                 // cout<<"YOu passed"<<endl;
                 
-               
          
                 if (metSirComplier == true){
 					score += 3;
@@ -862,19 +857,23 @@ cout<<"\t   Select your choice (1 or 2): ";
 					score -= 1;
 					}
 			
-			randomNumber1 = randomNumGeneratorFunction(4);
+			randomNumberChoice1 = randomNumGeneratorFunction(4);
 			
-			scoreCheck = score + randomNumber1;
+			scoreCheck = score + randomNumberChoice1;
 
 			if (scoreCheck >= 4) {
                 cout << "Success\n";
+                supplies += 2;
+                playerMorale += 3;
                 // scene7Function();
             } else {
                 std::cout << "Failure\n";
+				playerHealth -= 10;
+				playerMorale -= 15;
 				// scene8Function();
             }
 
-					pauseFunction("continue");
+				pauseFunction("continue");
                 
 				clearConsoleFunction();
                  
@@ -883,9 +882,28 @@ cout<<"\t   Select your choice (1 or 2): ";
                 break;
 
             case 2:
-                
+                int randomNumberChoice2;
+				int scoreCheck2;
+				
+				randomNumberChoice2 = randomNumGeneratorFunction(6);
+			
+				scoreCheck = score + randomNumberChoice2;
+
+			if (scoreCheck >= 5) {
+                cout << "Success\n";
+                supplies += 2;
+                playerMorale += 1;
+                // scene7Function();
+            } else {
+                std::cout << "Failure\n";
+				playerHealth -= 15;
+				playerMorale -= 3;
+				// scene8Function();
+            }
+
+				pauseFunction("continue");
+				
                 clearConsoleFunction();
-               
                 
                 validChoice = true; // Exit loop
                 break;
@@ -948,6 +966,595 @@ std::numeric_limits<std::streamsize>::max():
 } // scene6()Function function ends here
 
 
+// scenes 7 Function
+int scene7Function() {
+	
+	 scene7Title();
+	
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	playerStatsFunction();
+	
+	// Implementing scene 7 story
+
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
+	cout<<"Scene 7 - Inside The Archive ";
+	endLineFunction(2);
+
+// change the story to scene 7
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+
+sceneChoiceRevealFunction(); // coming from utils.hpp
+
+
+bool validChoice = false; // Flag to track valid input
+
+    while (!validChoice) { // Loop until valid input is received
+        // change the choices to scene 7
+        cout<<"\t Choices: \n"<<endl;
+		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+			<<"you can see ahead. \n"<<endl;
+        cout << "\t Select your choice (1 or 2): ";
+        cin >> choice; // Get user input
+
+        // Check if the input is valid integer
+        if (cin.fail()) {
+			clearConsoleFunction();
+            cout << "\n \t Invalid input! You can only enter a number.\n"<<endl;
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Ask for input again
+        }
+
+        // Now check the actual value of choice
+        switch (choice) {
+            case 1:
+                
+                clearConsoleFunction();
+				playerMorale += 3;
+				// scene9Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            case 2:
+               
+                clearConsoleFunction();
+                supplies += 3;
+                playerMorale += 1;
+                // scene9Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            default:
+                // Error message for any number that's not 1 or 2
+                // cout << "You have to enter 1 or 2 \n" << endl;
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				
+				/*
+ 
+The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
+
+*/
+    // If user typed extra characters on the same line, remove them so next input is clean
+    cin.clear(); // clear any error flags
+    /*
+    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
+	
+	
+    Function: Clears the error flags on the input stream.
+    Use: If the input stream has encountered an error (like trying to read a character when 
+    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
+    input operations can proceed.
+    
+    */
+    
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
+	/*
+	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
+	
+	
+    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
+
+
+std::numeric_limits<std::streamsize>::max():
+   std::numeric_limits: A template that gives properties of arithmetic types.
+   std::streamsize: A type to represent the size of streams, usually based on long long or int.
+   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
+		   to the maximum possible characters, ensuring we clear the entire line.
+	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
+			ignore, ensuring all extraneous input is removed.
+  
+  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
+
+	
+	*/
+				
+				clearConsoleFunction();
+                break; // Re-prompt user for input
+        }
+    } // while loop ends here	
+	
+	
+
+	sceneID = 7;
+	return sceneID;
+} // scene7Function() functions ends here
+
+// scenes 8 Function
+int scene8Function() {
+	
+	 scene8Title();
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	playerStatsFunction();
+	
+	// Implementing scene 8 story
+
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
+	cout<<"Scene 8 - Alarmed Retreat ";
+	endLineFunction(2);
+
+// change the story to scene 8
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+
+sceneChoiceRevealFunction(); // coming from utils.hpp
+
+
+bool validChoice = false; // Flag to track valid input
+
+    while (!validChoice) { // Loop until valid input is received
+        // change the choices to scene 8
+        cout<<"\t Choices: \n"<<endl;
+		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+			<<"you can see ahead. \n"<<endl;
+        cout << "\t Select your choice (1 or 2): ";
+        cin >> choice; // Get user input
+
+        // Check if the input is valid integer
+        if (cin.fail()) {
+			clearConsoleFunction();
+            cout << "\n \t Invalid input! You can only enter a number.\n"<<endl;
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Ask for input again
+        }
+
+        // Now check the actual value of choice
+        switch (choice) {
+            case 1:
+                
+                clearConsoleFunction();
+				playerMorale += 1;
+				// scene 5 for new questions or other scene like scene 5
+				// scene5Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            case 2:
+               
+                clearConsoleFunction();
+                supplies += 2;
+                playerMorale -= 1;
+                // scene10Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            default:
+                // Error message for any number that's not 1 or 2
+                // cout << "You have to enter 1 or 2 \n" << endl;
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				
+				/*
+ 
+The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
+
+*/
+    // If user typed extra characters on the same line, remove them so next input is clean
+    cin.clear(); // clear any error flags
+    /*
+    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
+	
+	
+    Function: Clears the error flags on the input stream.
+    Use: If the input stream has encountered an error (like trying to read a character when 
+    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
+    input operations can proceed.
+    
+    */
+    
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
+	/*
+	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
+	
+	
+    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
+
+
+std::numeric_limits<std::streamsize>::max():
+   std::numeric_limits: A template that gives properties of arithmetic types.
+   std::streamsize: A type to represent the size of streams, usually based on long long or int.
+   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
+		   to the maximum possible characters, ensuring we clear the entire line.
+	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
+			ignore, ensuring all extraneous input is removed.
+  
+  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
+
+	
+	*/
+				
+				clearConsoleFunction();
+                break; // Re-prompt user for input
+        }
+    } // while loop ends here	
+	
+	
+
+	sceneID = 8;
+	return sceneID;
+} // scene8Function() functions ends here
+
+
+// scenes 9 Function
+int scene9Function() {
+	
+	 scene9Title();
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	playerStatsFunction();
+	
+	// Implementing scene 9 story
+
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
+	cout<<"Scene 9 - The Truth and the Burden ";
+	endLineFunction(2);
+
+// change the story to scene 9
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+
+sceneChoiceRevealFunction(); // coming from utils.hpp
+
+
+bool validChoice = false; // Flag to track valid input
+
+    while (!validChoice) { // Loop until valid input is received
+        // change the choices to scene 9
+        cout<<"\t Choices: \n"<<endl;
+		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+			<<"you can see ahead. \n"<<endl;
+        cout << "\t Select your choice (1 or 2): ";
+        cin >> choice; // Get user input
+
+        // Check if the input is valid integer
+        if (cin.fail()) {
+			clearConsoleFunction();
+            cout << "\n \t Invalid input! You can only enter a number.\n"<<endl;
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Ask for input again
+        }
+
+        // Now check the actual value of choice
+        switch (choice) {
+            case 1:
+                
+                clearConsoleFunction();
+				supplies -= 1;
+                playerMorale += 3;
+                // scene11Function();  // final scene
+                
+                validChoice = true; // Exit loop
+                break;
+
+            case 2:
+               
+                clearConsoleFunction();
+                playerMorale += 2;
+                supplies += 1;
+                // scene11Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            default:
+                // Error message for any number that's not 1 or 2
+                // cout << "You have to enter 1 or 2 \n" << endl;
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				
+				/*
+ 
+The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
+
+*/
+    // If user typed extra characters on the same line, remove them so next input is clean
+    cin.clear(); // clear any error flags
+    /*
+    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
+	
+	
+    Function: Clears the error flags on the input stream.
+    Use: If the input stream has encountered an error (like trying to read a character when 
+    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
+    input operations can proceed.
+    
+    */
+    
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
+	/*
+	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
+	
+	
+    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
+
+
+std::numeric_limits<std::streamsize>::max():
+   std::numeric_limits: A template that gives properties of arithmetic types.
+   std::streamsize: A type to represent the size of streams, usually based on long long or int.
+   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
+		   to the maximum possible characters, ensuring we clear the entire line.
+	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
+			ignore, ensuring all extraneous input is removed.
+  
+  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
+
+	
+	*/
+				
+				clearConsoleFunction();
+                break; // Re-prompt user for input
+        }
+    } // while loop ends here	
+	
+	
+
+	sceneID = 9;
+	return sceneID;
+} // scene9Function() functions ends here
+
+
+// scenes 10 Function
+int scene10Function() {
+	
+	 scene10Title();
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	playerStatsFunction();
+	
+	// Implementing scene 10 story
+
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
+	cout<<"Scene 10 - Caravan of Chance ";
+	endLineFunction(2);
+
+// change the story to scene 10
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+
+sceneChoiceRevealFunction(); // coming from utils.hpp
+
+
+bool validChoice = false; // Flag to track valid input
+
+    while (!validChoice) { // Loop until valid input is received
+        // change the choices to scene 10
+        cout<<"\t Choices: \n"<<endl;
+		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
+		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
+			<<"you can see ahead. \n"<<endl;
+        cout << "\t Select your choice (1 or 2): ";
+        cin >> choice; // Get user input
+
+        // Check if the input is valid integer
+        if (cin.fail()) {
+			clearConsoleFunction();
+            cout << "\n \t Invalid input! You can only enter a number.\n"<<endl;
+            cin.clear(); // Clear error flags
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue; // Ask for input again
+        }
+
+        // Now check the actual value of choice
+        switch (choice) {
+            case 1:
+                int  random1, random2, random3;
+                
+                clearConsoleFunction();
+				supplies -= 1;
+                playerMorale += 2;
+                
+                random1 = rand() % 4 + 1;
+                random2 = rand() % 6 + 1;
+                score = random1 + random2;
+                // scene6Function();  
+                
+                validChoice = true; // Exit loop
+                break;
+
+            case 2:
+               
+                clearConsoleFunction();
+                playerMorale += 1;
+                supplies += 2;
+                // scene11Function();
+                
+                validChoice = true; // Exit loop
+                break;
+
+            default:
+                // Error message for any number that's not 1 or 2
+                // cout << "You have to enter 1 or 2 \n" << endl;
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				
+				/*
+ 
+The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
+
+*/
+    // If user typed extra characters on the same line, remove them so next input is clean
+    cin.clear(); // clear any error flags
+    /*
+    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
+	
+	
+    Function: Clears the error flags on the input stream.
+    Use: If the input stream has encountered an error (like trying to read a character when 
+    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
+    input operations can proceed.
+    
+    */
+    
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
+	/*
+	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
+	
+	
+    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
+
+
+std::numeric_limits<std::streamsize>::max():
+   std::numeric_limits: A template that gives properties of arithmetic types.
+   std::streamsize: A type to represent the size of streams, usually based on long long or int.
+   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
+		   to the maximum possible characters, ensuring we clear the entire line.
+	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
+			ignore, ensuring all extraneous input is removed.
+  
+  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
+
+	
+	*/
+				
+				clearConsoleFunction();
+                break; // Re-prompt user for input
+        }
+    } // while loop ends here	
+	
+	
+
+	sceneID = 10;
+	return sceneID;
+} // scene10Function() functions ends here
+
+// scenes 11 Function
+int scene11Function() {
+	
+	 scene11Title();
+	tabSpaceFunction(1);
+	spaceFunction(1);
+	playerStatsFunction();
+	
+	// Implementing scene 11 story
+
+	endLineFunction(1);
+	tabSpaceFunction(5);
+	spaceFunction(3);
+	cout<<"Scene 11 - Epilogue: Memory Needs Hands ";
+	endLineFunction(2);
+
+// change the story to scene 11
+cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
+	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
+	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+	
+cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
+	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
+	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
+	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+	
+cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
+	<<"data repository known as\n \t The Archive, a place of records and machines that might "
+	<<"still answer questions about the Event. \n"<<endl;
+	
+cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
+	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+
+endLineFunction(2);
+tabSpaceFunction(1);
+pauseFunction("continue");
+// after this add game finished function
+
+
+	sceneID = 11;
+	return sceneID;
+} // scene11Function() functions ends here
 
 void allScenes(){
 
