@@ -1400,22 +1400,15 @@ int scene10Function() {
 	cout<<"Scene 10 - Caravan of Chance ";
 	endLineFunction(2);
 
-// change the story to scene 10
-cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
-	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+cout<<"\t You join a small caravan of scavengers who value trade and simple rules "
+	<<"of survival. Days pass with\n \t shared bread and barter under song. \n"<<endl;
 	
-cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
-	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
-	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
-	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+cout<<"\t You learn a lot: how to mend a pump, where to find clean filters, and "
+	<<"how to coax an old generator\n \t back to life. \n"<<endl;
 	
-cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
-	<<"data repository known as\n \t The Archive, a place of records and machines that might "
-	<<"still answer questions about the Event. \n"<<endl;
-	
-cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
-	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+cout<<"\t You start to feel awkwardly, like part of something again. \n "<<endl;
+
+cout<<"\t Yet the memory of the Archive tugs. It holds answers you cannot unsee. \n"<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
@@ -1423,11 +1416,11 @@ sceneChoiceRevealFunction(); // coming from utils.hpp
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
-        // change the choices to scene 10
+        //  scene 10 choices
         cout<<"\t Choices: \n"<<endl;
-		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
-			<<"you can see ahead. \n"<<endl;
+		cout<<"\t 1: Use caravan's aid to mount a better armed return to The Archive. "<<endl;
+		cout<<"\t 2: Keep moving with caravan to distant settlements, spreading what "
+			<<"you know. \n"<<endl;
         cout << "\t Select your choice (1 or 2): ";
         cin >> choice; // Get user input
 
@@ -1452,7 +1445,7 @@ bool validChoice = false; // Flag to track valid input
                 random1 = rand() % 4 + 1;
                 random2 = rand() % 6 + 1;
                 score = random1 + random2;
-                // scene6Function();  
+                scene6Function();  
                 
                 validChoice = true; // Exit loop
                 break;
@@ -1462,7 +1455,7 @@ bool validChoice = false; // Flag to track valid input
                 clearConsoleFunction();
                 playerMorale += 1;
                 supplies += 2;
-                // scene11Function();
+                scene11Function();
                 
                 validChoice = true; // Exit loop
                 break;
