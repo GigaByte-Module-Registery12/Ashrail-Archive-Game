@@ -15,6 +15,7 @@ the content would only be processed once, thus avoiding the redefinition error.
 
 #include<iostream>
 #include<cstdlib> // Include for system calls
+#include<string>
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
 #include "scenes.hpp" // Contains game scenes
 using namespace std;
@@ -25,6 +26,7 @@ void endLineFunction(int e);
 void tabSpaceFunction(int t);
 void pauseFunction(string str);
 void sceneChoiceRevealFunction();
+void pinGuessingFunction();
 
 /*
 #include <cstdlib>: 
@@ -491,6 +493,7 @@ tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
 clearConsoleFunction();
 } // scene11Ttile() function ends here
+
 
 
 

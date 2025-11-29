@@ -14,7 +14,8 @@ the content would only be processed once, thus avoiding the redefinition error.
 
 #include<iostream>
 #include<string>
-#include<cstdlib> // using for exit(); function
+#include<cstdlib> // using for exit(); function and random()
+#include<ctime> // for srand()
 #include<limits> // for numeric_limits used by cin.ignore()
 /*
 #include <limits>: This header provides features to define the characteristics of numeric types. 
@@ -29,6 +30,16 @@ which converts a character to its lowercase equivalent.
 Using tolower() media the code is foolproof against different case inputs (both upper and lower). 
 It enhances user experience by preventing errors due to simple case mismatches.
 */
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::rand;
+using std::numeric_limits;
+using std::streamsize;
+using std::srand;
+using std::time;
 
 using namespace std;
 // our header files:
@@ -45,6 +56,8 @@ void endLineFunction(int e);
 void tabSpaceFunction(int t);
 void pauseFunction(string str);
 void sceneChoiceRevealFunction();
+void pinGuessingFunction();
+int randomNumGeneratorFunction(int n);
 
 // function declaration of scenes
 int scene2Function();
@@ -293,7 +306,6 @@ bool validChoice = false; // Flag to track valid input
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
 				cin.clear();
                 cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				clearConsoleFunction();
@@ -367,7 +379,6 @@ cout<<"Near the highest point, you see fresh footprints and, beneath them, a sma
 endLineFunction(2);
 tabSpaceFunction(1);
 sceneChoiceRevealFunction(); // coming from utils.hpp
-
 
 
 
@@ -553,7 +564,7 @@ cout<<"\t  Select your choice (1 or 2): ";
         // Now check the actual value of choice
         switch (choice) {
             case 1:
-                // Call function for scene 1
+               
                 clearConsoleFunction();
                 metSirComplier = true;
                 scene5Function();
@@ -562,7 +573,7 @@ cout<<"\t  Select your choice (1 or 2): ";
                 break;
 
             case 2:
-                // Call function for scene 2
+                
                 clearConsoleFunction();
                 supplies -= 1;
                 playerMorale -= 2;
@@ -577,7 +588,7 @@ cout<<"\t  Select your choice (1 or 2): ";
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				// cin.ignore(); // remove this line because we already did this below
+				
 				
 				/*
  
@@ -712,7 +723,6 @@ cout<<"\t   Select your choice (1 or 2): ";
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
 				
 				/*
  
@@ -829,11 +839,21 @@ cout<<"\t   Select your choice (1 or 2): ";
 // Remove leftover newline so later pauses/getline behave predictably
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         // explain above line in detail
+        
+
 
         // Now check the actual value of choice
         switch (choice) {
             case 1:
+            // declaring variables above to avoid errors, if not declared here error will be given
+                     int randomNumber1;
+					int scoreCheck;
+     
+                // pinGuessingFunction();
+                // cout<<"YOu passed"<<endl;
                 
+               
+         
                 if (metSirComplier == true){
 					score += 3;
 					} else if (metBangaliBaba == true){
@@ -841,8 +861,20 @@ cout<<"\t   Select your choice (1 or 2): ";
 					} else if (metSigmaTemp100 == true){
 					score -= 1;
 					}
-					
-					int scoreCheck;
+			
+			randomNumber1 = randomNumGeneratorFunction(4);
+			
+			scoreCheck = score + randomNumber1;
+
+			if (scoreCheck >= 4) {
+                cout << "Success\n";
+                // scene7Function();
+            } else {
+                std::cout << "Failure\n";
+				// scene8Function();
+            }
+
+					pauseFunction("continue");
                 
 				clearConsoleFunction();
                  
@@ -864,7 +896,6 @@ cout<<"\t   Select your choice (1 or 2): ";
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
 				
 				/*
  
@@ -907,7 +938,7 @@ std::numeric_limits<std::streamsize>::max():
 				
 				clearConsoleFunction();
                 break; // Re-prompt user for input
-        }
+        }// switch case end
     } // while loop ends here
 
 
@@ -915,6 +946,8 @@ std::numeric_limits<std::streamsize>::max():
 	return sceneID;
 	
 } // scene6()Function function ends here
+
+
 
 void allScenes(){
 
