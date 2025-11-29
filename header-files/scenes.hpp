@@ -805,7 +805,7 @@ cout<<"\t Its entrance is a rusted door marked with faded labels several languag
 cout<<"\t Around the door, six plaques hold fragments of text torn, half-melted lines that look "
 	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
 
-cout<<"\t You remember Bangali Baba's riddle about 'lines of speech' and the hint Sir Compiler "
+cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Â and the hint Sir Compiler "
 	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces."<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
@@ -1311,7 +1311,7 @@ bool validChoice = false; // Flag to track valid input
                 clearConsoleFunction();
 				supplies -= 1;
                 playerMorale += 3;
-                // scene11Function();  // final scene
+                scene11Function(); 
                 
                 validChoice = true; // Exit loop
                 break;
@@ -1321,7 +1321,7 @@ bool validChoice = false; // Flag to track valid input
                 clearConsoleFunction();
                 playerMorale += 2;
                 supplies += 1;
-                // scene11Function();
+                scene11Function();
                 
                 validChoice = true; // Exit loop
                 break;
@@ -1533,28 +1533,30 @@ int scene11Function() {
 	cout<<"Scene 11 - Epilogue: Memory Needs Hands ";
 	endLineFunction(2);
 
-// change the story to scene 11
-cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
-	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+
+cout<<"\t You stand beneath the same pale light where you began, but you are not the "
+	<<"same. Whether you took the\n \t Archive's coordinates back to scattered survivors, "
+	<<"stayed to guard its humming racks, or traveled with\n \t a caravan carrying "
+	<<"knowledge like a seed. \n"<<endl;
 	
-cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
-	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
-	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
-	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+cout<<"\t Your choices stitched together a small patch of future. People who learn "
+	<<"the Archive's lessons start\n \t rebuiding trust in systems and in each other. \n"<<endl;
 	
-cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
-	<<"data repository known as\n \t The Archive, a place of records and machines that might "
-	<<"still answer questions about the Event. \n"<<endl;
+cout<<"\t In a world that nearly forgot how to care, you carry memory with hands that "
+	<<"will teach others to build\n \t again. The sky over Ashrail Valley is not bright yet, "
+	<<"but it holds quiet patience. \n"<<endl;
 	
-cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
-	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+cout<<"\t Outside, far on a road that you once feared to take, new footsteps echo - "
+	<<"not yours alone \n"<<endl; 
 
 endLineFunction(2);
 tabSpaceFunction(1);
 pauseFunction("continue");
 // after this add game finished function
 
+clearConsoleFunction();
+
+// now game end message and display credits
 
 	sceneID = 11;
 	return sceneID;
