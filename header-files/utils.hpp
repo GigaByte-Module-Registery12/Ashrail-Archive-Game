@@ -56,7 +56,6 @@ void pauseFunction(string str){
 		//cin.ignore(); // Ignores the new line or the input
 		// cin.ignore(); // using instead of system("PAUSE"); for cross platform functionality
 	
-		
 		cin.get(); // wait for single Enter
 		
 		// cin.get works same like system("PAUSE");

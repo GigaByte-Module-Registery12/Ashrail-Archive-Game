@@ -458,8 +458,6 @@ endLineFunction(2);
 
 string truthAndBurden = R"(
 
-
-
 )";
 
 cout<<truthAndBurden<<endl;
