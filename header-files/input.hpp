@@ -93,7 +93,8 @@ The combination of cin.clear() and cin.ignore(...) is a common practice in handl
     
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
 	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
+	cin.ignore(...): This effectively ignores any extra input left in the buffer until 
+	it encounters a newline character, ensuring that the next read (if any) starts fresh.
 	
 	
     Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
@@ -218,10 +219,61 @@ error: expected primary-expression before ‘max’
 	}
 		
 	
-	
 } // gamePlayingOrNotFunction function ends here.
 
+void playAgainPromptFunction() {
+    // Prompt for input
+    gameTitleAsciiFunction(); // Assuming this exists
 
+    endLineFunction(4);
+    tabSpaceFunction(5);
+    spaceFunction(3);
+    
+    cout << "Do you want to play the game again (Y/N): ";
+    cin >> playGameAgain;
+    
+    // Normalize input
+    playGameAgain = tolower(playGameAgain);
+
+    // Clear any remaining input
+    cin.clear();
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+} // playAgainPromptFunction() ends here
+
+
+void playGame() {
+    // Logic for your game goes here
+    allScenes();
+}
+
+void playingGameAgain() {
+    while (true) {
+        playAgainPromptFunction();
+
+        if (playGameAgain == 'y') {
+            playGame(); // Call game logic function
+            break; // Exit the loop after game completion
+        } else if (playGameAgain == 'n') {
+            gameRunning = false;
+            playerNotPlaysGame(); // Logic for not playing again
+            break; // Exit the loop
+        } else {
+            endLineFunction(5);
+            tabSpaceFunction(2);
+            spaceFunction(3);
+            cout << "Invalid input! Please press Y for Yes or N for No." << endl;
+            endLineFunction(2);
+            tabSpaceFunction(5);
+            spaceFunction(6);
+            cout << "Press any key to continue..." << endl;
+            
+            cin.clear(); // Clear error state
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear input buffer
+            
+            clearConsoleFunction();
+        } // else block, if else end
+    } // while loop
+} // playingGameAgain() function ends here
 
 
 #endif // INPUT_HPP

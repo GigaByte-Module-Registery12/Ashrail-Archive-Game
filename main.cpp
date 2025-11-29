@@ -6,15 +6,18 @@
 #include "./header-files/input.hpp" // safe input helper function for input
 using namespace std;
 
+
 int main(){
 
-
+DisableMaximizeButton();       // Disable the maximize button
+DisableResizeFunctionality();   // Disable resizing 
 
 // Implement everything in main while loop
 
+while (gameRunning){
 
 // Small Screen Recomendation function
-	smallScrRecommendFunction();
+	// smallScrRecommendFunction();
 	
 	// Game Title Ascii screen
 	gameTitleAsciiFunction();
@@ -24,9 +27,13 @@ int main(){
 	playOrNotInputFunction();
 	
 	// game playing or not if else and other functions
-	gamePlayingOrNotFunction();
-
+	gamePlayingOrNotFunction();	
 	
+	// Play game again
+	playingGameAgain();
+		
+} // while loop
+
 
 
 	

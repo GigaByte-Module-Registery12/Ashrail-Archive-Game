@@ -1569,14 +1569,30 @@ void endingFunction(){
 	gameEndTitle();
 	
 	endLineFunction(3);
-	
+	tabSpaceFunction(6);
+	spaceFunction(9);
 	cout<<"Credits: \n"<<endl;
-	cout<<"THe game is made possible by these three: "<<endl;
+	tabSpaceFunction(6);
+	spaceFunction(3);
+	cout<<"Projects Developers: \n"<<endl;
+	tabSpaceFunction(6);
+	spaceFunction(5);	
 	cout<<"Dodwani Khusbhu"<<endl;
+	tabSpaceFunction(6);
+	spaceFunction(5);
 	cout<<"Jawad Ali"<<endl;
+	tabSpaceFunction(6);
+	spaceFunction(5);
 	cout<<"Gilgamesh BABA"<<endl;
-	pauseFunction("exit");
-	exit(0);
+	
+	// pauseFunction("exit");
+	// exit(0);
+
+		endLineFunction(2);
+		tabSpaceFunction(5);
+		pauseFunction("continue");
+		clearConsoleFunction();
+
 }
 
 void allScenes(){
