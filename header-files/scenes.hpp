@@ -65,11 +65,11 @@ int scene3Function();
 int scene4Function();
 int scene5Function();
 int scene6Function();
-// int scene7Function();
-// int scene8Function();
-// int scene9Function();
-// int scene10Function();
-// int scene11Function();
+int scene7Function();
+int scene8Function();
+int scene9Function();
+int scene10Function();
+int scene11Function();
 void sceneTwoOptionalChoiceFunction();
 
 // function declaration of scene titles
@@ -508,7 +508,7 @@ int scene4Function() {
 cout<<"\t By midday you reach a crossroads of scorched billboards. A small camp of tarps "
 	<<"and salvaged metal stands\n \t by the road. \n "<<endl;
 	
-cout<<"\t Laughter - thin but genuine — drifts out. Among the campers are three notable "
+cout<<"\t Laughter - thin but genuine - drifts out. Among the campers are three notable "
 	<<"figures.. \n"<<endl;
 
 cout<<"\t who chat and trade: a tall man with spectacles and an old laptop, and a cheerful "
@@ -792,7 +792,7 @@ int scene6Function(){
 	tabSpaceFunction(5);
 	spaceFunction(4);
 	cout<<"Scene 6 - Approaching The Archive";
-	endLineFunction(3);
+	endLineFunction(2);
 	
 // Implemeting scene 6 story
 
@@ -802,21 +802,18 @@ cout<<"\t The terrain eases and you see the hulking mass of The Archive ahead: a
 cout<<"\t Its entrance is a rusted door marked with faded labels several languages. An old terminal "
 	<<"sits to one side,\n \t its screen cracked but dark. \n"<<endl;
 	
-cout<<"\t Around the door, six plaques hold fragments of text — torn, half-melted lines that look "
+cout<<"\t Around the door, six plaques hold fragments of text torn, half-melted lines that look "
 	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
 
-cout<<"\t You remember Bangali Baba’s riddle about “lines of speech” and the hint Sir Compiler "
-	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces. \n"<<endl;
+cout<<"\t You remember Bangali Baba's riddle about 'lines of speech' and the hint Sir Compiler "
+	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces."<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
-
-
-
 
 	bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
-		cout<<"\t * Remeber for your both choice first you will Guess a 3-Digit PIN then the actual key! *\n"<<endl;
+	//1	cout<<"\t * Remeber for your both choice first you will Guess a 3-Digit PIN then the actual key! *\n"<<endl;
        cout<<"\t  Choices: \n"<<endl;
 cout<<"\t  1: Try to intercept the plaques and enter words based on a poetic guess "<<endl;
 cout<<"\t  2: Use brute force - try common archive keys you heard on the radio and the scraps \n"<<endl;
@@ -862,21 +859,36 @@ cout<<"\t   Select your choice (1 or 2): ";
 			scoreCheck = score + randomNumberChoice1;
 
 			if (scoreCheck >= 4) {
-                cout << "Success\n";
+				endLineFunction(1);
+				tabSpaceFunction(1);
+				spaceFunction(2);
+                cout << " Success! Sir complier hints Increased Success Chances "<<endl;
                 supplies += 2;
                 playerMorale += 3;
-                // scene7Function();
-            } else {
-                std::cout << "Failure\n";
+                 
+            	endLineFunction(1);
+				tabSpaceFunction(1);
+				spaceFunction(2);
+				pauseFunction("continue");
+				
+				scene7Function();
+            
+			} else {
+                endLineFunction(1);
+                tabSpaceFunction(1);
+                spaceFunction(2);
+				cout << " Failure! You failed and alarm traps "<<endl;
 				playerHealth -= 10;
 				playerMorale -= 15;
-				// scene8Function();
-            }
-
+			
+				endLineFunction(1);
+				tabSpaceFunction(1);
+				spaceFunction(2);
 				pauseFunction("continue");
-                
-				clearConsoleFunction();
-                 
+				
+				scene8Function();
+            }
+            	
                 
                 validChoice = true; // Exit loop
                 break;
@@ -890,27 +902,38 @@ cout<<"\t   Select your choice (1 or 2): ";
 				scoreCheck = score + randomNumberChoice2;
 
 			if (scoreCheck >= 5) {
-                cout << "Success\n";
+				endLineFunction(1);
+				tabSpaceFunction(1);
+                cout << " Success! Brute Force Attack Successfully Executed."<<endl;
                 supplies += 2;
                 playerMorale += 1;
-                // scene7Function();
+                
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				spaceFunction(1);
+				pauseFunction("continue");
+				 
+				scene7Function();
             } else {
-                std::cout << "Failure\n";
+            	endLineFunction(1);
+				tabSpaceFunction(1);
+                cout << " Failure! and You now triggered defense. "<<endl;
 				playerHealth -= 15;
 				playerMorale -= 3;
-				// scene8Function();
-            }
-
+				
+				endLineFunction(1);
+				tabSpaceFunction(1);
+				endLineFunction(1);
 				pauseFunction("continue");
 				
-                clearConsoleFunction();
-                
+				scene8Function();
+            }
+ 
                 validChoice = true; // Exit loop
                 break;
 
             default:
                 // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
@@ -983,34 +1006,28 @@ int scene7Function() {
 	cout<<"Scene 7 - Inside The Archive ";
 	endLineFunction(2);
 
-// change the story to scene 7
-cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
-	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+// Implemented Scene 7 Story
+cout<<"\t The door groans open on pneumatic echoes. Inside, corridors fold like the inside "
+	<<"of a fossilized machine.\n \t Shelves of drives and paper towers lean in dim light. \n"<<endl;
 	
-cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
-	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
-	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
-	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+cout<<"\t A humming server rack still breathes; a cluster of screens blink with cached logs. "
+	<<"The Archive's guardians\n \t are not people but recorded voices: fragments of announcements "
+	<<"and courts transcipts that scroll as text\n \t on old monitors. \n"<<endl;
 	
-cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
-	<<"data repository known as\n \t The Archive, a place of records and machines that might "
-	<<"still answer questions about the Event. \n"<<endl;
+cout<<"\t You find a terminal labeled \"Core log.\" On it, a menu offers two readable logs: "
+	<<" \"Event Origins\" and\n \t \"Aftercare Directives.\"  \n"<<endl;
 	
-cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
-	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
-
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
 
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
-        // change the choices to scene 7
+        //  scene 7 Chocices
         cout<<"\t Choices: \n"<<endl;
-		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
-			<<"you can see ahead. \n"<<endl;
+		cout<<"\t 1: Read \"Event Origins\" to learn what happened."<<endl;
+		cout<<"\t 2: Read \"Aftercare Directives\" to learn post-Event survival methods and community "
+			<<"locations \n"<<endl;
         cout << "\t Select your choice (1 or 2): ";
         cin >> choice; // Get user input
 
@@ -1029,7 +1046,7 @@ bool validChoice = false; // Flag to track valid input
                 
                 clearConsoleFunction();
 				playerMorale += 3;
-				// scene9Function();
+				scene9Function();
                 
                 validChoice = true; // Exit loop
                 break;
@@ -1039,14 +1056,14 @@ bool validChoice = false; // Flag to track valid input
                 clearConsoleFunction();
                 supplies += 3;
                 playerMorale += 1;
-                // scene9Function();
+                scene9Function();
                 
                 validChoice = true; // Exit loop
                 break;
 
             default:
                 // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
+                
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
@@ -1117,7 +1134,7 @@ int scene8Function() {
 	cout<<"Scene 8 - Alarmed Retreat ";
 	endLineFunction(2);
 
-// change the story to scene 8
+// Implemented Scene 8 Story
 cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
 	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
 	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
@@ -1140,7 +1157,7 @@ sceneChoiceRevealFunction(); // coming from utils.hpp
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
-        // change the choices to scene 8
+        // Scene 8 Choices
         cout<<"\t Choices: \n"<<endl;
 		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
 		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
@@ -1253,22 +1270,22 @@ int scene9Function() {
 	cout<<"Scene 9 - The Truth and the Burden ";
 	endLineFunction(2);
 
-// change the story to scene 9
-cout<<"\t You wake to the hollow dawn light that leaks through the torn canvas of your shelter. "
-	<<"The world you\n \t remember - streets of hum and glowing ads - is gone, traded for rust "
-	<<"and wind that carries the metallic\n \t tang of old fires. \n"<<endl;
+// Implemented Scene 9 story
+cout<<"\t You read. The Event was a cascade of failures: an experimental network "
+	<<"update, a set of automated distri-\n \t bution decisions, and a final "
+	<<"human error. \n"<<endl;
 	
-cout<<"\t They call this wasteland Ashrail Valley: a frayed ribbon of cracked highway, "
-	<<"collapsed overpasses, and\n \t skeletal towers that once hosted voices."
-	<<"You have a pack with a few tins, a battered radio that rarely\n \t finds a signal, and "
-	<<"a worn notebook with a name on the first page: "<<playerName<<". \n"<<endl;
+cout<<"\t The logs are clinical and merciless. They show how communities tried "
+	<<"route aid, how some servers priori-\n \t tized convenience, and how a small "
+	<<"group of Engineers made a choice that rippled outward. The Archive "
+	<<"\n \t doesn't offer villains or absolution - only records. \n"<<endl;
 	
-cout<<"\t The last message you heard on the radio was a voice promising refuge at an old "
-	<<"data repository known as\n \t The Archive, a place of records and machines that might "
-	<<"still answer questions about the Event. \n"<<endl;
+cout<<"\t Among the pages you find a list of coordinates for rebuilding centers "
+	<<"and a last message:\n \t \"Memory needs hands.\" \n"<<endl;
 	
-cout<<"\t Today you decide to set out toward The Archive, but the road forks where the highway "
-	<<"is split by a\n \t collapsed overpass. \n"<<endl; 
+cout<<"\t As you close the log, you realize you can carry these coordinates "
+	<<"to survivors and that knowledge itself\n \t has become your most valuable "
+	<<"supply. \n"<<endl; 
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
@@ -1276,11 +1293,11 @@ sceneChoiceRevealFunction(); // coming from utils.hpp
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
-        // change the choices to scene 9
+        // Scene 9 Choices
         cout<<"\t Choices: \n"<<endl;
-		cout<<"\t 1: Take the lower road, closer to the riverbed - it's quiter, but shadowed and wet."<<endl;
-		cout<<"\t 2: Climb the broken overpass and take the high road -- risk of exposure, but faster "
-			<<"you can see ahead. \n"<<endl;
+		cout<<"\t 1: Take the coordinates and head back to help survivors rebuild."<<endl;
+		cout<<"\t 2: Secure the Archive and stay - preserve knowledge and defend "
+			<<"this place. \n"<<endl;
         cout << "\t Select your choice (1 or 2): ";
         cin >> choice; // Get user input
 
