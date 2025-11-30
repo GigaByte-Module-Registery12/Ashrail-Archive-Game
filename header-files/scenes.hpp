@@ -1159,11 +1159,17 @@ void endingFunction(){
 	
 	gameEndTitle();
 	
-	cout<<"\t \"In a world silenced by rust and error memory becomes the last refuge. " 
-		<<"Carry the records like lanterns, teach hands to rebuild what code once "
-		<<"promised, and let small acts of repair stitch a future from the ashes.\" ";
+	tabSpaceFunction(3);
+	spaceFunction(4);
+	cout<<"\"In a world silenced by rust and error memory becomes the last refuge. "<<endl; 
+	tabSpaceFunction(3);
+	spaceFunction(4);
+	cout<<"Carry the records like lanterns, teach hands to rebuild what code once "<<endl;
+	tabSpaceFunction(3);
+	spaceFunction(4);
+	cout<<"promised, and let small acts of repair stitch a future from the ashes.\" "<<endl;
 		
-	endLineFunction(3);
+	endLineFunction(2);
 	tabSpaceFunction(6);
 	spaceFunction(9);
 	cout<<"Credits: \n"<<endl;

@@ -258,8 +258,8 @@ void playingGameAgain() {
             break; // Exit the loop
         } else {
             endLineFunction(5);
-            tabSpaceFunction(2);
-            spaceFunction(3);
+            tabSpaceFunction(4);
+            spaceFunction(5);
             cout << "Invalid input! Please press Y for Yes or N for No." << endl;
             endLineFunction(2);
             tabSpaceFunction(5);
@@ -280,7 +280,7 @@ void errorMsgForChoiceInput(){
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
+				// cin.ignore();
 				
 	/*
 	The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. 
