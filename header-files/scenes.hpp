@@ -863,7 +863,7 @@ cout<<"\t   Select your choice (1 or 2): ";
 				endLineFunction(1);
 				tabSpaceFunction(1);
 				spaceFunction(2);
-                cout << " Success! Sir complier hints Increased Success Chances "<<endl;
+                cout << " Success! Increased Success Chances "<<endl;
                 supplies += 2;
                 playerMorale += 3;
                  
