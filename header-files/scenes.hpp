@@ -1,6 +1,8 @@
 // scenes header file
-#ifndef SCENES_HPP
-#define SCENES_HPP
+
+// Header Gurards prevent multiple inclusions of this header file, avoiding redefinition errors
+#ifndef SCENES_HPP // Check if SCENES_HPP is not defined
+#define SCENES_HPP // Define SCENES_HPP to prevent multiple inclusions
 /*
 
  #ifndef SCENES_HPP (if not defined): Check if the macro UTILS_HPP is not defined.
@@ -166,53 +168,7 @@ bool validChoice = false; // Flag to track valid input
                 break;
 
             default:
-                // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
         }
     } // while loop ends here	
