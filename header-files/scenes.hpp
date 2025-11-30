@@ -617,7 +617,7 @@ cout<<"\t Its entrance is a rusted door marked with faded labels several languag
 cout<<"\t Around the door, six plaques hold fragments of text torn, half-melted lines that look "
 	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
 
-cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Â and the hint Sir Compiler "
+cout<<"\t You remember Bangali Baba's riddle about 'lines of speech' and the hint Sir Compiler "
 	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces."<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
@@ -1185,15 +1185,13 @@ void endingFunction(){
 	cout<<"Jawad Ali"<<endl;
 	tabSpaceFunction(6);
 	spaceFunction(5);
-	cout<<"Gilgamesh BABA"<<endl;
+	cout<<"AND THE GAME CREATER"<<endl;
 	
-	// pauseFunction("exit");
-	// exit(0);
-
-		endLineFunction(2);
-		tabSpaceFunction(6);
-		pauseFunction("continue");
-		clearConsoleFunction();
+	endLineFunction(2);
+	tabSpaceFunction(6);
+	spaceFunction(3);
+	pauseFunction("continue");
+	clearConsoleFunction();
 	
 		
 }
