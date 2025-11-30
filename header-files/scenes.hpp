@@ -5,26 +5,26 @@
 #define SCENES_HPP // Define SCENES_HPP to prevent multiple inclusions
 /*
 
- #ifndef SCENES_HPP (if not defined): Check if the macro UTILS_HPP is not defined.
+ #ifndef SCENES_HPP (if not defined): Check if the macro SCENES_HPP is not defined.
  #define SCENES_HPP: Define the macro if it isn't defined.
  #endif: Ends the conditional.
 
-This way, if utils.hpp is included multiple times directly or indirectly, 
+This way, if scenes.hpp is included multiple times directly or indirectly, 
 the content would only be processed once, thus avoiding the redefinition error.
 
 */
 
-#include<iostream>
-#include<string>
-#include<cstdlib> // using for exit(); function and random()
-#include<ctime> // for srand()
-#include<limits> // for numeric_limits used by cin.ignore()
+#include <iostream>  // Include standard input-output library
+#include <string>    // Include string library for string operations
+#include <cstdlib>   // Include standard library for exit() and random() functions
+#include <ctime>     // Include library for srand() to seed random number generation
+#include <limits>    // Include to access numeric limits for cin.ignore()
 /*
 #include <limits>: This header provides features to define the characteristics of numeric types. 
 It allows access to information like the maximum and minimum values a type can hold.
 */
 
-#include<cctype>                         // for tolower() and isdigit()
+#include <cctype>                         // for tolower() and isdigit()
 /*
 #include <cctype>: This header contains functions for character handling, including tolower(), 
 which converts a character to its lowercase equivalent.
@@ -39,55 +39,57 @@ It enhances user experience by preventing errors due to simple case mismatches.
 #include "ui.hpp" // contains ui related function and clearing screen
 #include "globalVars.hpp" // contains global variable
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::rand;
-using std::numeric_limits;
-using std::streamsize;
-using std::srand;
-using std::time;
+// std library components
+using std::cout; // Use cout from the standard namespace
+using std::cin;  // Use cin from the standard namespace
+using std::endl; // Use endl from the standard namespace
+using std::string; // Use string from the standard namespace
+using std::rand; // Use rand for generating random numbers
+using std::numeric_limits; // Use numeric_limits for defining limits of data types
+using std::streamsize; // Use streamsize for defining the size of streams
+using std::srand; // Use srand for seeding the random number generator
+using std::time; // Use time for getting the current time
 
-// function declaration
-void playerStatsFunction();
-void clearConsoleFunction();
+// Function declarations
+void playerStatsFunction(); // Function to display player stats
+void clearConsoleFunction(); // Function to clear the console
 
-void spaceFunction(int s);
-void endLineFunction(int e);
-void tabSpaceFunction(int t);
-void pauseFunction(string str);
-void sceneChoiceRevealFunction();
-void pinGuessingFunction();
-int randomNumGeneratorFunction(int n);
-void gameEndTitle();
+void spaceFunction(int s); // Function to add spaces
+void endLineFunction(int e); // Function to add line breaks
+void tabSpaceFunction(int t); // Function to add tab spaces
+void pauseFunction(string str); // Function to pause execution
+void sceneChoiceRevealFunction(); // Function to reveal scene choices
+void pinGuessingFunction(); // Function for PIN guessing logic
+int randomNumGeneratorFunction(int n); // Function to generate a random number
+void gameEndTitle(); // Function to display the game ending title
+void errorMsgForChoiceInput(); // Function to return a error msg if choice input is not valid
 
-// function declaration of scenes
-int scene2Function();
-int scene3Function();
-int scene4Function();
-int scene5Function();
-int scene6Function();
-int scene7Function();
-int scene8Function();
-int scene9Function();
-int scene10Function();
-int scene11Function();
-void sceneTwoOptionalChoiceFunction();
-void endingFunction();
-// function declaration of scene titles
-void startSceneTitle();
-void scene2Title();
-void scene3Title();
-void scene4Title();
-void scene5Title();
-void scene6Title();
-void scene7Title();
-void scene8Title();
-void scene9Title();
-void scene10Title();
-void scene11Title();
+// Function declarations for scenes
+int scene2Function(); // Function for scene 2
+int scene3Function(); // Function for scene 3
+int scene4Function(); // Function for scene 4
+int scene5Function(); // Function for scene 5
+int scene6Function(); // Function for scene 6
+int scene7Function(); // Function for scene 7
+int scene8Function(); // Function for scene 8
+int scene9Function(); // Function for scene 9
+int scene10Function(); // Function for scene 10
+int scene11Function(); // Function for scene 11
+void sceneTwoOptionalChoiceFunction(); // Function for optional choice in scene 2
+void endingFunction(); // Function for the game ending
 
+// Function declarations for scene titles
+void startSceneTitle(); // Function to display the title of the start scene
+void scene2Title(); // Function to display the title of scene 2
+void scene3Title(); // Function to display the title of scene 3
+void scene4Title(); // Function to display the title of scene 4
+void scene5Title(); // Function to display the title of scene 5
+void scene6Title(); // Function to display the title of scene 6
+void scene7Title(); // Function to display the title of scene 7
+void scene8Title(); // Function to display the title of scene 8
+void scene9Title(); // Function to display the title of scene 9
+void scene10Title(); // Function to display the title of scene 10
+void scene11Title(); // Function to display the title of scene 11
 
 
 
@@ -170,11 +172,10 @@ bool validChoice = false; // Flag to track valid input
             default:
                 errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
-
 	sceneID = 1;
 	return sceneID;
 } // startScene() functions ends here
@@ -236,9 +237,6 @@ bool validChoice = false; // Flag to track valid input
 			sceneTwoOptionalChoiceFunction();
 			
 			scene4Function();
-                
-                
-                
                 validChoice = true; // Exit loop
                 break;
 
@@ -254,18 +252,10 @@ bool validChoice = false; // Flag to track valid input
                 break;
 
             default:
-             
-				
 				// Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.clear();
-                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case emds here
     } // while loop ends here
 
 	sceneID = 2;
@@ -388,54 +378,9 @@ cout<<"  Select your choice (1 or 2): ";
 
             default:
                 // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				cin.ignore();
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here
 
 
@@ -539,54 +484,9 @@ cout<<"\t  Select your choice (1 or 2): ";
 
             default:
                 // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
@@ -671,54 +571,10 @@ cout<<"\t   Select your choice (1 or 2): ";
                 break;
 
             default:
-                // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+				// Error message for any number that's not 1 or 2
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here
 
 	 
@@ -891,50 +747,7 @@ cout<<"\t   Select your choice (1 or 2): ";
 
             default:
                 // Error message for any number that's not 1 or 2
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
         }// switch case end
     } // while loop ends here
@@ -1020,53 +833,9 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                 // Error message for any number that's not 1 or 2
-                
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
@@ -1148,58 +917,13 @@ bool validChoice = false; // Flag to track valid input
                 break;
 
             default:
-                // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+               // Error message for any number that's not 1 or 2
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
-
 	sceneID = 8;
 	return sceneID;
 } // scene8Function() functions ends here
@@ -1284,54 +1008,10 @@ bool validChoice = false; // Flag to track valid input
                 break;
 
             default:
-                // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+               // Error message for any number that's not 1 or 2
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
@@ -1419,53 +1099,9 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                 // Error message for any number that's not 1 or 2
-                // cout << "You have to enter 1 or 2 \n" << endl;
-                endLineFunction(1);
-				tabSpaceFunction(1);
-				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
-				
-				/*
- 
-The combination of cin.clear() and cin.ignore(...) is a common practice in handling user input in C++. It ensures that if there's an error from bad input, the program cleans the input stream so that the next read operation behaves as expected.
-
-*/
-    // If user typed extra characters on the same line, remove them so next input is clean
-    cin.clear(); // clear any error flags
-    /*
-    cin.clear();: This is crucial for managing the stream state. If a previous input caused an error (like non-character input for a char), this clears that error state.
-	
-	
-    Function: Clears the error flags on the input stream.
-    Use: If the input stream has encountered an error (like trying to read a character when 
-    expecting an integer and vice versa), cin.clear() resets the state so that subsequent 
-    input operations can proceed.
-    
-    */
-    
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard rest of line
-	/*
-	cin.ignore(...): This effectively ignores any extra input left in the buffer until it encounters a newline character, ensuring that the next read (if any) starts fresh.
-	
-	
-    Function: This line is used to discard characters from the input buffer until a newline character is found or the specified number of characters has been discarded.
-
-
-std::numeric_limits<std::streamsize>::max():
-   std::numeric_limits: A template that gives properties of arithmetic types.
-   std::streamsize: A type to represent the size of streams, usually based on long long or int.
-   .max(): Returns the maximum value representable by the type, effectively allowing us to ignore up 
-		   to the maximum possible characters, ensuring we clear the entire line.
-	Together, std::numeric_limits<std::streamsize>::max() gives the maximum number of input characters to 
-			ignore, ensuring all extraneous input is removed.
-  
-  '\n': This specifies that the clearing process continues until a newline is reached, which means the function will ignore everything until the end of the current line of input, ensuring no residual characters affect subsequent reads.
-
-	
-	*/
-				
-				clearConsoleFunction();
+                errorMsgForChoiceInput();
                 break; // Re-prompt user for input
-        }
+        } // switch case ends here
     } // while loop ends here	
 	
 	
