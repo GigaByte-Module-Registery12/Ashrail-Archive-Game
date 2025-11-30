@@ -16,7 +16,6 @@ the content would only be processed once, thus avoiding the redefinition error.
 #include<iostream>
 #include<cstdlib> // Include for system calls
 #include<string>
-#include<windows.h>
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
 #include "scenes.hpp" // Contains game scenes
 using namespace std;
@@ -128,7 +127,7 @@ void playerNotPlaysGame(){
 
 
 void gameTitleAsciiFunction(){
-	
+	clearConsoleFunction();
 /*
 R() stands for "raw string literal". It allows you to define strings 
 that contain special characters (like newlines and backslashes) without 
@@ -550,20 +549,5 @@ void gameEndTitle(){
 
 }
 
-
-void DisableMaximizeButton() {
-    HWND consoleWindow = GetConsoleWindow(); // Get the console window handle
-    LONG_PTR style = GetWindowLongPtr(consoleWindow, GWL_STYLE);
-    style &= ~WS_MAXIMIZEBOX; // Disable maximize button
-    SetWindowLongPtr(consoleWindow, GWL_STYLE, style);
-}
-
-// Function to disable resizing
-void DisableResizeFunctionality() {
-    HWND consoleWindow = GetConsoleWindow(); // Get the console window handle
-    LONG_PTR style = GetWindowLongPtr(consoleWindow, GWL_STYLE);
-    style &= ~WS_THICKFRAME; // Disable resizing
-    SetWindowLongPtr(consoleWindow, GWL_STYLE, style);
-}
 
 #endif // UI_HPP

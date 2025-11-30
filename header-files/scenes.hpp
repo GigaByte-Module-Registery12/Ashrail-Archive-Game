@@ -1568,6 +1568,10 @@ void endingFunction(){
 	
 	gameEndTitle();
 	
+	cout<<"\t \"In a world silenced by rust and error memory becomes the last refuge. " 
+		<<"Carry the records like lanterns, teach hands to rebuild what code once "
+		<<"promised, and let small acts of repair stitch a future from the ashes.\" ";
+		
 	endLineFunction(3);
 	tabSpaceFunction(6);
 	spaceFunction(9);
@@ -1589,7 +1593,7 @@ void endingFunction(){
 	// exit(0);
 
 		endLineFunction(2);
-		tabSpaceFunction(5);
+		tabSpaceFunction(6);
 		pauseFunction("continue");
 		clearConsoleFunction();
 

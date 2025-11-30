@@ -223,13 +223,12 @@ error: expected primary-expression before ‘max’
 
 void playAgainPromptFunction() {
     // Prompt for input
-    gameTitleAsciiFunction(); // Assuming this exists
+    gameTitleAsciiFunction(); 
 
-    endLineFunction(4);
-    tabSpaceFunction(5);
-    spaceFunction(3);
-    
-    cout << "Do you want to play the game again (Y/N): ";
+	endLineFunction(4);		// function for breaking the lines in utils.hpp
+	tabSpaceFunction(5);	// function for space of tab in utils.hpp
+	spaceFunction(2); 		// function foronly space  in utils.hpp    
+    cout << "Do you want to play the game again(Y/N): ";
     cin >> playGameAgain;
     
     // Normalize input
