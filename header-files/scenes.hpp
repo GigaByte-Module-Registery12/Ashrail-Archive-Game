@@ -498,7 +498,7 @@ cout<<"\t  Select your choice (1 or 2): ";
 int scene5Function(){
 	
 	 scene5Title();
-	
+
 	playerStatsFunction();
 	
 	endLineFunction(1);
@@ -617,7 +617,7 @@ cout<<"\t Its entrance is a rusted door marked with faded labels several languag
 cout<<"\t Around the door, six plaques hold fragments of text torn, half-melted lines that look "
 	<<"like parts of\n \t poems, error logs, and radio transcripts. \n"<<endl;
 
-cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Ã‚Â and the hint Sir Compiler "
+cout<<"\t You remember Bangali Baba's riddle about 'lines of speech'Â and the hint Sir Compiler "
 	<<"gave about a\n \t three -word key. The terminal awaits input: three words, separated by spaces."<<endl;
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
@@ -845,8 +845,8 @@ bool validChoice = false; // Flag to track valid input
 
 // scenes 8 Function
 int scene8Function() {
-	
-	 scene8Title();
+	playedScene8 = true;
+	scene8Title();
 	tabSpaceFunction(1);
 	spaceFunction(1);
 	playerStatsFunction();
@@ -1022,7 +1022,7 @@ bool validChoice = false; // Flag to track valid input
 
 // scenes 10 Function
 int scene10Function() {
-	
+	playedScene10 = true;
 	 scene10Title();
 	tabSpaceFunction(1);
 	spaceFunction(1);
@@ -1159,6 +1159,7 @@ void endingFunction(){
 	
 	gameEndTitle();
 	
+	endLineFunction(3);
 	tabSpaceFunction(3);
 	spaceFunction(4);
 	cout<<"\"In a world silenced by rust and error memory becomes the last refuge. "<<endl; 

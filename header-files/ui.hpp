@@ -18,6 +18,7 @@ the content would only be processed once, thus avoiding the redefinition error.
 #include<string>
 #include "utils.hpp" // contains helper functions like endLine, tabSpace, spaceFunction
 #include "scenes.hpp" // Contains game scenes
+#include "globalVars.hpp" // contains global varaibles
 using namespace std;
 
 // Function declarations
@@ -27,6 +28,7 @@ void tabSpaceFunction(int t);
 void pauseFunction(string str);
 void sceneChoiceRevealFunction();
 void pinGuessingFunction();
+int scene8Function(); // Function for scene 8
 
 /*
 #include <cstdlib>: 
@@ -157,25 +159,22 @@ string scene1 = R"(
                                              / _\ ___ ___ _ __   ___  / |
                                              \ \ / __/ _ \ '_ \ / _ \ | |
                                              _\ \ (_|  __/ | | |  __/ | |
-                                             \__/\___\___|_| |_|\___| |_|
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                             \__/\___\___|_| |_|\___| |_|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 )";
 
 cout<<scene1<<endl;
 
-endLineFunction(2);
+endLineFunction(1);
 
 string ashrailValley = R"(
-
-                                     _               _ _  __      __   _ _            
-                           /\       | |             (_) | \ \    / /  | | |           
-                          /  \   ___| |__  _ __ __ _ _| |  \ \  / /_ _| | | ___ _   _ 
-                         / /\ \ / __| '_ \| '__/ _` | | |   \ \/ / _` | | |/ _ \ | | |
-                        / ____ \\__ \ | | | | | (_| | | |    \  / (_| | | |  __/ |_| |
-                       /_/    \_\___/_| |_|_|  \__,_|_|_|     \/ \__,_|_|_|\___|\__, |
-                                                                                 __/ |
-                                                                                |___/ 
-
+                                            _               _ _  __      __   _ _            
+                                  /\       | |             (_) | \ \    / /  | | |           
+                                 /  \   ___| |__  _ __ __ _ _| |  \ \  / /_ _| | | ___ _   _ 
+                                / /\ \ / __| '_ \| '__/ _` | | |   \ \/ / _` | | |/ _ \ | | |
+                               / ____ \\__ \ | | | | | (_| | | |    \  / (_| | | |  __/ |_| |
+                              /_/    \_\___/_| |_|_|  \__,_|_|_|     \/ \__,_|_|_|\___|\__, |
+                                                                                        __/ |
+                                                                                       |___/ 
 )";
 
 cout<<ashrailValley<<endl;
@@ -249,10 +248,17 @@ cout<<scene3<<endl;
 endLineFunction(2);
 
 string highRoadWind = R"(
-
-
-
+                          _    _ _       _       _____                 _  __          ___           _
+                         | |  | (_)     | |     |  __ \               | | \ \        / (_)         | |
+                         | |__| |_  __ _| |__   | |__) |___   __ _  __| |  \ \  /\  / / _ _ __   __| |
+                         |  __  | |/ _` | '_ \  |  _  // _ \ / _` |/ _` |   \ \/  \/ / | | '_ \ / _` |
+                         | |  | | | (_| | | | | | | \ \ (_) | (_| | (_| |    \  /\  /  | | | | | (_| |
+                         |_|  |_|_|\__, |_| |_| |_|  \_\___/ \__,_|\__,_|     \/  \/   |_|_| |_|\__,_|
+                                    __/ | 
+                                   |___/
 )";
+	
+cout<<highRoadWind<<endl;
 	
 endLineFunction(2);
 tabSpaceFunction(6);
@@ -279,7 +285,14 @@ cout<<scene4<<endl;
 endLineFunction(2);
 
 string RoadSideCamp = R"(
-
+                                _____                 _     _     _         _____                     
+                               |  __ \               | |   (_)   | |       / ____|  
+                               | |__) |___   __ _  __| |___ _  __| | ___  | |     __ _ _ __ ___  _ __
+                               |  _  // _ \ / _` |/ _` / __| |/ _` |/ _ \ | |    / _` | '_ ` _ \| '_ \
+                               | | \ \ (_) | (_| | (_| \__ \ | (_| |  __/ | |___| (_| | | | | | | |_) |
+                               |_|  \_\___/ \__,_|\__,_|___/_|\__,_|\___|  \_____\__,_|_| |_| |_| .__/
+                                                                                                | |
+                                                                                                |_|
 )";
 	
 	cout<<RoadSideCamp<<endl;
@@ -287,7 +300,6 @@ string RoadSideCamp = R"(
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
-// cin.get();
 clearConsoleFunction();
 } // scene4Ttile() function ends here
 
@@ -308,16 +320,21 @@ cout<<scene5<<endl;
 endLineFunction(2);
 
 string sirCompilerTalk = R"(
-
-
-
+         ___                        _                   _ _   _      ___ _        ___                _ _    
+        / __|___ _ ___ _____ _ _ __(_)___ _ _   __ __ _(_) |_| |_   / __(_)_ _   / __|___ _ __  _ __| (_)___ _ _
+       | (__/ _ \ ' \ V / -_) '_(_-< / _ \ ' \  \ V  V / |  _| ' \  \__ \ | '_| | (__/ _ \ '  \| '_ \ | / -_) '_|
+        \___\___/_||_\_/\___|_| /__/_\___/_||_|  \_/\_/|_|\__|_||_| |___/_|_|    \___\___/_|_|_| .__/_|_\___|_|
+                                                                                               |_|
 )";
 
 cout<<sirCompilerTalk<<endl;
-	
+
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
+if (playedScene8){
+	cin.get();
+}
 clearConsoleFunction();
 } // scene5Ttile() function ends here
 
@@ -337,7 +354,12 @@ cout<<scene6<<endl;
 endLineFunction(2);
 
 string theArchive = R"(
-
+                                  _______ _                                _     _          
+                                 |__   __| |              /\              | |   (_) 
+                                    | |  | |__   ___     /  \   _ ____   _| |__  ___   _____
+                                    | |  | '_ \ / _ \   / /\ \ | '__\ \ / / '_ \| \ \ / / _ \
+                                    | |  | | | |  __/  / ____ \| |   \ V /| | | | |\ V /  __/
+                                    |_|  |_| |_|\___| /_/    \_\_|    \_/ |_| |_|_| \_/ \___|
 )";
 
 cout<<theArchive<<endl;
@@ -345,6 +367,9 @@ cout<<theArchive<<endl;
 endLineFunction(2);
 tabSpaceFunction(6);
 pauseFunction("continue"); // coming from utils.hpp
+if (playedScene10){
+	cin.get();
+}
 clearConsoleFunction();
 } // scene6Ttile() function ends here
 
@@ -365,9 +390,12 @@ cout<<scene7<<endl;
 endLineFunction(2);
 
 string insideArhive = R"(
-
-
-
+                               _____           _     _                            _     _           
+                              |_   _|         (_)   | |          /\              | |   (_) 
+                                | |  _ __  ___ _  __| | ___     /  \   _ ____   _| |__  ___   _____
+                                | | | '_ \/ __| |/ _` |/ _ \   / /\ \ | '__\ \ / / '_ \| \ \ / / _ \
+                               _| |_| | | \__ \ | (_| |  __/  / ____ \| |   \ V /| | | | |\ V /  __/
+                              |_____|_| |_|___/_|\__,_|\___| /_/    \_\_|    \_/ |_| |_|_| \_/ \___|   
 )";
 
 cout<<insideArhive<<endl;
@@ -395,8 +423,12 @@ cout<<scene8<<endl;
 endLineFunction(2);
 
 string alarmedRetreat = R"(
-
-
+                               _                               _   _____      _                  _
+                         /\   | |                             | | |  __ \    | |                | |
+                        /  \  | | __ _ _ __ _ __ ___   ___  __| | | |__) |___| |_ _ __ ___  __ _| |_
+                       / /\ \ | |/ _` | '__| '_ ` _ \ / _ \/ _` | |  _  // _ \ __| '__/ _ \/ _` | __|
+                      / ____ \| | (_| | |  | | | | | |  __/ (_| | | | \ \  __/ |_| | |  __/ (_| | |_ 
+                     /_/    \_\_|\__,_|_|  |_| |_| |_|\___|\__,_| |_|  \_\___|\__|_|  \___|\__,_|\__|
 
 )";
 
@@ -424,7 +456,10 @@ cout<<scene9<<endl;
 endLineFunction(2);
 
 string truthAndBurden = R"(
-
+                      _____ _          _____         _   _                   _   ___             _  
+                     |_   _| |_  ___  |_   _| _ _  _| |_| |_    __ _ _ _  __| | | _ )_  _ _ _ __| |___ _ _ 
+                       | | | ' \/ -_)   | || '_| || |  _| ' \  / _` | ' \/ _` | | _ \ || | '_/ _` / -_) ' \
+                       |_| |_||_\___|   |_||_|  \_,_|\__|_||_| \__,_|_||_\__,_| |___/\_,_|_| \__,_\___|_||_|
 )";
 
 cout<<truthAndBurden<<endl;
@@ -456,9 +491,12 @@ cout<<scene10<<endl;
 endLineFunction(2);
 
 string caravanChance = R"(
-
-
-
+                   _____                                          __    _____ _                         
+                  / ____|                                        / _|  / ____| | 
+                 | |     __ _ _ __ __ ___   ____ _ _ __     ___ | |_  | |    | |__   __ _ _ __   ___ ___
+                 | |    / _` | '__/ _` \ \ / / _` | '_ \   / _ \|  _| | |    | '_ \ / _` | '_ \ / __/ _ \
+                 | |___| (_| | | | (_| |\ V / (_| | | | | | (_) | |   | |____| | | | (_| | | | | (_|  __/
+                  \_____\__,_|_|  \__,_| \_/ \__,_|_| |_|  \___/|_|    \_____|_| |_|\__,_|_| |_|\___\___|
 )";
 
 cout<<caravanChance<<endl;
@@ -489,9 +527,14 @@ cout<<scene11<<endl;
 endLineFunction(2);
 
 string memoryHands = R"(
-
-
-
+                  __  __                                   _   _               _   _    _                 _ 
+                 |  \/  |                                 | \ | |             | | | |  | |               | | 
+                 | \  / | ___ _ __ ___   ___  _ __ _   _  |  \| | ___  ___  __| | | |__| | __ _ _ __   __| |___
+                 | |\/| |/ _ \ '_ ` _ \ / _ \| '__| | | | | . ` |/ _ \/ _ \/ _` | |  __  |/ _` | '_ \ / _` / __|
+                 | |  | |  __/ | | | | | (_) | |  | |_| | | |\  |  __/  __/ (_| | | |  | | (_| | | | | (_| \__ \
+                 |_|  |_|\___|_| |_| |_|\___/|_|   \__, | |_| \_|\___|\___|\__,_| |_|  |_|\__,_|_| |_|\__,_|___/
+                                                    __/ | 
+                                                   |___/
 )";
 
 cout<<memoryHands<<endl;
@@ -509,9 +552,14 @@ clearConsoleFunction();
 
 void gameEndTitle(){
 	
-	string gameEndTitleAscii = R"(
-	The Ending
-	)";
+string gameEndTitleAscii = R"(
+                    _______ _            ______           _    ____   __    _____                     
+                   |__   __| |          |  ____|         | |  / __ \ / _|  / ____| 
+                      | |  | |__   ___  | |__   _ __   __| | | |  | | |_  | |  __  __ _ _ __ ___   ___
+                      | |  | '_ \ / _ \ |  __| | '_ \ / _` | | |  | |  _| | | |_ |/ _` | '_ ` _ \ / _ \
+                      | |  | | | |  __/ | |____| | | | (_| | | |__| | |   | |__| | (_| | | | | | |  __/
+                      |_|  |_| |_|\___| |______|_| |_|\__,_|  \____/|_|    \_____|\__,_|_| |_| |_|\___|
+)";
 	
 	cout<<gameEndTitleAscii<<endl;
 
