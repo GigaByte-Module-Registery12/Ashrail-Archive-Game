@@ -1,82 +1,70 @@
 // utils Header file
 
-#ifndef UTILS_HPP
-#define UTILS_HPP
+// Header Guards
+#ifndef UTILS_HPP // Check if UTILS_HPP is not defined
+#define UTILS_HPP // Define UTILS_HPP to prevent multiple inclusions
 
 /*
 
- #ifndef UTILS_HPP (if not defined): Check if the macro UTILS_HPP is not defined.
- #define UTILS_HPP: Define the macro if it isn't defined.
- #endif: Ends the conditional.
-
-This way, if utils.hpp is included multiple times directly or indirectly, 
-the content would only be processed once, thus avoiding the redefinition error.
+The purpose of this header guard is to prevent the content of this file from being processed 
+multiple times, which would avoid redefinition errors.
 
 */
 
+#include <iostream> // Include standard input-output library
+#include <limits>   // Include library for numeric limits used with cin.ignore()
+#include <cstdlib>  // Include standard library for general functions
+#include <ctime>    // Include library for time functions
+#include "globalVars.hpp" // Include global variables header file
+#include "ui.hpp" // Include user interface functions header file
 
+using std::cout; // Use cout from the standard namespace
+using std::cin;  // Use cin from the standard namespace
+using std::endl; // Use endl from the standard namespace
+using std::string; // Use string from the standard namespace
+using namespace std; // Use the standard namespace for convenience
 
-#include<iostream>
-#include<limits>     // for numeric_limits used by cin.ignore(..);
-#include<cstdlib>
-#include<ctime>
-#include "globalVars.hpp"
-#include "ui.hpp"
+// Function to produce space output
+void spaceFunction(int s) {
+    for (int i = 1; i <= s; i++) { // Loop to print spaces
+        cout << " "; // Print a single space
+    } // End of loop
+} // spaceFunction(int s) ends here.
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using namespace std;
+// Function to break lines
+void endLineFunction(int e) {
+    for (int i = 1; i <= e; i++) { // Loop to print newlines
+        cout << endl; // Print a newline character
+    } // End of loop
+} // endLineFunction(int e) ends here.
 
+// Function to produce tab spacing
+void tabSpaceFunction(int t) {
+    for (int j = 1; j <= t; j++) { // Loop to print tab spaces
+        cout << "\t"; // Print a tab character
+    } // End of loop
+} // tabSpaceFunction(int t) ends here.
 
-void spaceFunction(int s){
-	for(int i = 1; i <= s; i++){
-		cout<<" ";
-	} // loops end here.
-} // spaceFunction(int s) function ends here.
-
-// Function for breaking the lines
-void endLineFunction(int e){
-	for(int i = 1; i <= e; i++){
-		cout<<endl;
-	}// loops end here.
-} // endLineFunction(int e) function ends here.
-
-// Function for spacing of tab
-void tabSpaceFunction(int t){
-	for(int j = 1; j <= t; j++){
-		cout<<"\t";
-	} // loops end here.
-} // tabSpaceFunction(int t) function ends here
-
-void pauseFunction(string str){
-	
-		cout<<"Press enter to "<<str<<endl;
-		//cin.ignore(); // Ignores the new line or the input
-		// cin.ignore(); // using instead of system("PAUSE"); for cross platform functionality
-	
-		cin.get(); // wait for single Enter
-		
-		// cin.get works same like system("PAUSE");
-	
+// Function that prompts the user and waits for Enter key
+void pauseFunction(string str) {
+    cout << "Press enter to " << str << endl; // Prompt user to press Enter
+    cin.get(); // Waits for the user to press Enter
 } // pauseFunction() ends here.
 
-void sceneChoiceRevealFunction(){
-	
-	tabSpaceFunction(1);
-	spaceFunction(1);
-	pauseFunction("reveal the choices! ");
-	
-} // sceneChoiceRevealFunction() ends here
+// Function to display choices with added spacing
+void sceneChoiceRevealFunction() {
+    tabSpaceFunction(1); // Add a tab space
+    spaceFunction(1);    // Add a normal space
+    pauseFunction("reveal the choices! "); // Prompt to reveal the choices
+} // sceneChoiceRevealFunction() ends here.
 
-int randomNumGeneratorFunction(int n){
-	
-srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
-int randomNum = rand() % n + 1; // Generate a digit between 0-5
-return randomNum;
+// Function to generate a random number between 1 and n
+int randomNumGeneratorFunction(int n) {
+    srand(static_cast<unsigned int>(time(0))); // Seed the random number generator based on current time
+    int randomNum = rand() % n + 1; // Generate a number between 1 and n
+    return randomNum; // Return the generated random number
+} // randomNumGeneratorFunction() ends here
 
-} //  randomNumGeneratorFunction(); ends here
 
 // PIN GUESSING
 

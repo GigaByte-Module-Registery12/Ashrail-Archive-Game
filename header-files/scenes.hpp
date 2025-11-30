@@ -127,7 +127,6 @@ cout<<"\t Today you decide to set out toward The Archive, but the road forks whe
 
 sceneChoiceRevealFunction(); // coming from utils.hpp
 
-
 bool validChoice = false; // Flag to track valid input
 
     while (!validChoice) { // Loop until valid input is received
