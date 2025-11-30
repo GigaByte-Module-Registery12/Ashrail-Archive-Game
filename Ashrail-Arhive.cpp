@@ -27,8 +27,6 @@ DisableResizeFunctionality();   // Disable resizing
 
 while (gameRunning){
 
-// Small Screen Recomendation function
-	// smallScrRecommendFunction();
 	
 	// Game Title Ascii screen
 	gameTitleAsciiFunction();

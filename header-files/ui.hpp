@@ -84,38 +84,6 @@ conditions.
 } // clearConsoleFunction() function end here.
 
 
-
-
-
-
-
-// Small screen recommendation function
-void smallScrRecommendFunction(){
-	clearConsoleFunction(); // clears the console first
-	endLineFunction(5);		// function for breaking the lines in utils.hpp
-	tabSpaceFunction(3);	// function for space of tab in utils.hpp
-	spaceFunction(6); 		// function foronly space  in utils.hpp
-	// Below text want to center it in console Terminal
-	cout<<"A small recommendation, Please don't open this in full screen!"<<endl;
-
-	
-	endLineFunction(1);		// function for breaking the lines in utils.hpp
-	tabSpaceFunction(6); 	// function for space of tab in utils.hpp
-	spaceFunction(4);		// function for only space in utils.hpp
-	// Below text want to center it in console Terminal
-	cout<<"Use as it is.";
-	
-	endLineFunction(10);	// function for breaking the lines in utils.hpp
-	tabSpaceFunction(5);	// function for space of tab in utils.hpp
-	spaceFunction(5);		// function for only space in utils.hpp
-	// Below text want to center it in console Terminal
-	// cout<<"Press enter to move further.";
-	pauseFunction("move further");
-	// system("cls");
-	clearConsoleFunction(); // clear the console screen
-} // smallScrRecommendFunction() function ends here.
-
-
 void playerNotPlaysGame(){
 	
 	// player not want to play
