@@ -1175,8 +1175,8 @@ bool validChoice = false; // Flag to track valid input
                 
                 clearConsoleFunction();
 				playerMorale += 1;
-				// scene 5 for new questions or other scene like scene 5
-				// scene5Function();
+				
+				scene5Function();
                 
                 validChoice = true; // Exit loop
                 break;
