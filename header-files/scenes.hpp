@@ -1194,7 +1194,8 @@ void endingFunction(){
 		tabSpaceFunction(6);
 		pauseFunction("continue");
 		clearConsoleFunction();
-
+	
+		
 }
 
 void allScenes(){
