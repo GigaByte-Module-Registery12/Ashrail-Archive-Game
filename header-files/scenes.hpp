@@ -1143,7 +1143,8 @@ cout<<"\t Outside, far on a road that you once feared to take, new footsteps ech
 
 endLineFunction(2);
 tabSpaceFunction(1);
-pauseFunction("continue");
+pauseFunction("continue, press two times");
+cin.get();
 // after this add game finished function
 
 clearConsoleFunction();
@@ -1179,13 +1180,14 @@ void endingFunction(){
 	cout<<"Projects Developers: \n"<<endl;
 	tabSpaceFunction(6);
 	spaceFunction(5);	
-	cout<<"Dodwani Khusbhu"<<endl;
+	cout<<"Dodwani Khusboo"<<endl;
 	tabSpaceFunction(6);
 	spaceFunction(5);
 	cout<<"Jawad Ali"<<endl;
 	tabSpaceFunction(6);
 	spaceFunction(5);
 	cout<<"AND THE GAME CREATER"<<endl;
+	
 	
 	endLineFunction(2);
 	tabSpaceFunction(6);
