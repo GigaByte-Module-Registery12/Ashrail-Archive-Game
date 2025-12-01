@@ -1186,7 +1186,7 @@ void endingFunction(){
 	cout<<"Jawad Ali"<<endl;
 	tabSpaceFunction(6);
 	spaceFunction(5);
-	cout<<"AND THE GAME CREATER"<<endl;
+	cout<<"AND THE GAME DEVELOPER"<<endl;
 	
 	
 	endLineFunction(2);
