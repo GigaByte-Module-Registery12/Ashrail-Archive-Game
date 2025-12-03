@@ -280,6 +280,7 @@ void errorMsgForChoiceInput(){
                 endLineFunction(1);
 				tabSpaceFunction(1);
 				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				
 				// cin.ignore();
 				
 	/*
@@ -331,6 +332,7 @@ void errorMsgForChoiceInput(){
 	*/
 				
 				clearConsoleFunction();
+				
 
 } // errorMsgForChoiceInput() ends here
 

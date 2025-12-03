@@ -42,7 +42,7 @@ bool gameRunning = true; // Flag to indicate if the game is currently running
 char playGameAgain = ' '; // Variable to store player's choice to play again
 bool playedScene8 = false; // flag to indicate if scene 8 is played
 bool playedScene10 = false; // flag to indicate if scene 10 is played
-
+bool playedScene1 = false;
 
 #endif // GLOBALVARS_HPP
 

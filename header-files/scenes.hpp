@@ -95,7 +95,7 @@ void scene11Title(); // Function to display the title of scene 11
 
 // First Starting scenes
 int startScene() {
-	
+	playedScene1 = true;
 	startSceneTitle();
 	tabSpaceFunction(1);
 	spaceFunction(1);
@@ -169,11 +169,17 @@ bool validChoice = false; // Flag to track valid input
                 break;
 
             default:
-                errorMsgForChoiceInput();
-                break; // Re-prompt user for input
+                // Error message for any number that's not 1 or 2
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+				cin.ignore();
+                cin.clear(); // clear any error flags
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+                clearConsoleFunction();
+				break; // Re-prompt user for input
         } // switch case ends here
     } // while loop ends here	
-	
 	
 	sceneID = 1;
 	return sceneID;
@@ -746,8 +752,15 @@ cout<<"\t   Select your choice (1 or 2): ";
 
             default:
                 // Error message for any number that's not 1 or 2
+                // Error message for any number that's not 1 or 2
+//                endLineFunction(1);
+//				tabSpaceFunction(1);
+//				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+//                cin.clear(); // clear any error flags
+//                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+//                clearConsoleFunction();
                 errorMsgForChoiceInput();
-                break; // Re-prompt user for input
+				break; // Re-prompt user for input
         }// switch case end
     } // while loop ends here
 
@@ -832,8 +845,15 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                 // Error message for any number that's not 1 or 2
-                errorMsgForChoiceInput();
-                break; // Re-prompt user for input
+                // errorMsgForChoiceInput();
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+                cin.ignore();
+				cin.clear(); // clear any error flags
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+                clearConsoleFunction();                
+				break; // Re-prompt user for input
         } // switch case ends here
     } // while loop ends here	
 	
@@ -917,7 +937,13 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                // Error message for any number that's not 1 or 2
-                errorMsgForChoiceInput();
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+                cin.ignore();
+				cin.clear(); // clear any error flags
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+                clearConsoleFunction();
                 break; // Re-prompt user for input
         } // switch case ends here
     } // while loop ends here	
@@ -1008,8 +1034,14 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                // Error message for any number that's not 1 or 2
-                errorMsgForChoiceInput();
-                break; // Re-prompt user for input
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+                cin.ignore();
+				cin.clear(); // clear any error flags
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+                clearConsoleFunction(); 
+				break; // Re-prompt user for input
         } // switch case ends here
     } // while loop ends here	
 	
@@ -1098,7 +1130,13 @@ bool validChoice = false; // Flag to track valid input
 
             default:
                 // Error message for any number that's not 1 or 2
-                errorMsgForChoiceInput();
+                endLineFunction(1);
+				tabSpaceFunction(1);
+				cout<<"You can only enter 1 or 2, Press enter to enter 1 or 2 again"<<endl;
+                cin.ignore();
+				cin.clear(); // clear any error flags
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard rest of line
+                clearConsoleFunction();
                 break; // Re-prompt user for input
         } // switch case ends here
     } // while loop ends here	
